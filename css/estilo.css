@@ -539,7 +539,7 @@ body {
     grid-template-areas: "tercerTitle" "imagenMonta" "descripcionMonta"; }
     .segundaSeccion .tercerTitle {
       grid-area: tercerTitle;
-      display: flex;
+      align-self: center;
       text-align: center;
       font-family: "Alfa Slab One", cursive;
       font-size: x-large;
@@ -549,7 +549,9 @@ body {
       text-shadow: black 3px 3px 1px; }
     .segundaSeccion .imagenMonta {
       grid-area: imagenMonta;
-      width: auto; }
+      width: 300px;
+      display: inline-block;
+      margin-left: 10%; }
     .segundaSeccion .descripcionMonta {
       grid-area: descripcionMonta;
       text-align: center;

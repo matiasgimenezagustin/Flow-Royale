@@ -74,7 +74,7 @@
         ;
         .tercerTitle{
             grid-area: tercerTitle;
-            display: flex;
+            align-self: center;
             text-align: center;
             font-family: $ff-title;
             font-size: x-large;
@@ -85,7 +85,9 @@
         }
         .imagenMonta{
             grid-area: imagenMonta;
-            width: auto;
+            width: 300px;
+            display: inline-block;
+            margin-left: 10%;
         }
         .descripcionMonta{
             grid-area: descripcionMonta;
