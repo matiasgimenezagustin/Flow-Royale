@@ -1,0 +1,29 @@
+
+
+
+/*Vars SCSS*/
+
+$paleta: (azul:rgb(8, 106, 167), azul-claro:rgb(41, 119, 168), rojo:rgb(135, 15, 24), rojo-claro: rgb(145, 39, 46), blanco:rgb(255, 255, 255), dorado:rgb(255, 215, 0), negro: rgb(0,0,0));
+$ff-title:'Alfa Slab One', cursive;
+$ff-text:'Yanone Kaffeesatz', sans-serif;
+
+/*imports SCSS*/
+
+@import "reset";
+@import "body";
+@import "420px-body";
+@import "nav";
+@import "420px-navbar";
+@import "home-page";
+@import "420px-home-page";
+@import "mazos-page";
+@import "420px-mazos-page";
+@import "resgistro-page";
+@import "420px-registro-page";
+@import "nosotros-page";
+@import "420px-nosotros-page";
+@import "donaciones-page";
+@import "420px-donaciones-page";
+@import "footer";
+
+

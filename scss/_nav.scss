@@ -1,0 +1,49 @@
+.navegador{
+    grid-area: navegador;
+    position: fixed;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: map-get($paleta, azul);
+    box-shadow: map-get($paleta, negro ) 2px 2px 5px;
+    .mainTitle{
+        background-color: map-get($paleta, rojo);
+        width: 25%;
+        font-family: $ff-title;
+        font-size: xx-large;
+        color: map-get($paleta, blanco);
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+    }
+    .cajaLinks{
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        .li{
+            list-style-type: none;
+            .linkInterno{
+                text-decoration: none;
+                font-family: 'Alfa Slab One', cursive;
+                font-size: medium;
+                color: map-get($paleta, blanco );
+                word-spacing: 2px;
+                letter-spacing: 1px;
+                transition: all 1s ease;
+                text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+                &:hover{
+                    font-size: large;
+                    color: map-get($paleta, dorado);
+                    text-shadow: map-get($paleta, negro ) 4px 4px 2px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,866 @@
+/*Vars SCSS*/
+/*imports SCSS*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  text-decoration: none; }
+
+/*body general*/
+body {
+  background-image: url(../imagenes/cr.png); }
+
+/*body de la Home Page*/
+.body {
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 70px 6fr 4fr 1fr;
+  grid-template-areas: "navegador navegador navegador" "mainContent mainContent mainContent" "bus bus bus" "footer footer footer";
+  gap: 20px; }
+
+/*body de la pagina Mazos*/
+.body1 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr 3fr 2fr 1fr;
+  grid-template-areas: "navegador" "hTitle" "primeraSeccion" "segundaSeccion" "footer";
+  gap: 30px; }
+
+/*body de la pagina Registro*/
+.body3 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr 2fr 1fr;
+  grid-template-areas: "navegador" "rTitle" "formulario" "footer";
+  gap: 20px; }
+
+/*body de la pagina Nosotros*/
+.body4 {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr 3fr 70px;
+  grid-template-areas: "navegador" "nTitle" "nLista" "footer";
+  gap: 30px; }
+
+/*body de la page Donaciones*/
+.body5 {
+  background-image: url(../imagenes/cr.png);
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 70px 1fr 1fr 200px 1fr;
+  grid-template-areas: "navegador" "dHeader" "cajaPaypal" "duendeImg" "dSaludos" "footer"; }
+
+/*media queries de los body*/
+@media screen and (max-width: 420px) {
+  .body {
+    background-image: url(../imagenes/cr.png);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 340px 1100px 4fr 60px;
+    grid-template-areas: "navegador" "mainContent" "bus" "footer"; }
+  .body1 {
+    background-image: url(../imagenes/cr.png);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 340px 100px 550px 2fr 60px;
+    grid-template-areas: "navegador" "hTitle" "primeraSeccion" "segundaSeccion" "footer"; }
+  .body3 {
+    background-image: url(../imagenes/cr.png);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 340px 100px 2fr 60px;
+    grid-template-areas: "navegador" "rTitle" "formulario" "footer";
+    gap: 20px; }
+  .body4 {
+    background-image: url(../imagenes/cr.png);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 340px 100px 3fr 60px;
+    grid-template-areas: "navegador" "nTitle" "nLista" "footer"; }
+  .body5 {
+    background-image: url(../imagenes/cr.png);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 340px 300px 1fr 1fr 60px;
+    grid-template-areas: "navegador" "dHeader" "cajaPaypal" "duendeImg" "dSaludos" "footer"; } }
+
+.navegador {
+  grid-area: navegador;
+  position: fixed;
+  width: 100%;
+  height: 70px;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  background-color: #086aa7;
+  box-shadow: black 2px 2px 5px; }
+  .navegador .mainTitle {
+    background-color: #870f18;
+    width: 25%;
+    font-family: "Alfa Slab One", cursive;
+    font-size: xx-large;
+    color: white;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-shadow: black 3px 3px 1px; }
+  .navegador .cajaLinks {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center; }
+    .navegador .cajaLinks .li {
+      list-style-type: none; }
+      .navegador .cajaLinks .li .linkInterno {
+        text-decoration: none;
+        font-family: 'Alfa Slab One', cursive;
+        font-size: medium;
+        color: white;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        transition: all 1s ease;
+        text-shadow: black 3px 3px 1px; }
+        .navegador .cajaLinks .li .linkInterno:hover {
+          font-size: large;
+          color: gold;
+          text-shadow: black 4px 4px 2px; }
+
+/*Navbar 420px SCSS*/
+@media screen and (max-width: 420px) {
+  .navegador {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #870f18;
+    height: 280px;
+    width: 100%; }
+    .navegador .mainTitle {
+      background-color: #870f18;
+      width: 100%;
+      height: 30%;
+      font-family: "Alfa Slab One", cursive;
+      font-size: xx-large;
+      color: white;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      text-align: center;
+      text-shadow: black 3px 3px 1px; }
+    .navegador .cajaLinks {
+      width: 100%;
+      height: 70%;
+      background-color: #086aa7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center; }
+      .navegador .cajaLinks .linkInterno {
+        text-decoration: none;
+        font-family: "Alfa Slab One", cursive;
+        font-size: large;
+        color: white;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        transition: all 1s ease;
+        text-shadow: black 3px 3px 1px; } }
+
+.mainContent {
+  grid-area: mainContent;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "caballeroImg contentTitle" "caballeroImg liMain";
+  color: white; }
+  .mainContent .caballeroImg {
+    grid-area: caballeroImg;
+    display: flex;
+    align-items: center;
+    justify-content: center; }
+  .mainContent .contentTitle {
+    display: flex;
+    align-items: center;
+    grid-area: contentTitle;
+    text-decoration: none;
+    font-family: "Alfa Slab One", cursive;
+    font-size: x-large;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: black 3px 3px 1px; }
+  .mainContent .liMain {
+    grid-area: liMain;
+    font-size: larger;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: black 3px 3px 1px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; }
+    .mainContent .liMain .lista1 {
+      animation-name: lista1;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s; }
+
+@keyframes lista1 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 20px; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista2 {
+      animation-name: lista2;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 4s; }
+
+@keyframes lista2 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 20px; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista3 {
+      animation-name: lista3;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 8s; }
+
+@keyframes lista3 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 20px; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista4 {
+      animation-name: lista4;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 12s; }
+
+@keyframes lista4 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 20px; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista5 {
+      animation-name: lista5;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 16s; }
+
+@keyframes lista5 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 20px; }
+  90% {
+    color: white; } }
+
+.bus {
+  grid-area: bus;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-areas: "buscadorTitle buscadorTitle buscadorTitle" "none buscador magoElc" "none pBuscador magoElc";
+  color: white; }
+  .bus .none {
+    grid-area: none; }
+  .bus .buscadorTitle {
+    grid-area: buscadorTitle;
+    font-family: 'Alfa Slab One', cursive;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    text-shadow: black 3px 3px 1px; }
+  .bus .magoElc {
+    grid-area: magoElc; }
+  .bus .pBuscador {
+    display: flex;
+    justify-content: center;
+    grid-area: pBuscador;
+    font-size: large;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: black 3px 3px 1px;
+    font-family: "Yanone Kaffeesatz", sans-serif; }
+  .bus .buscador {
+    grid-area: buscador;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 30px; }
+    .bus .buscador .formBuscador {
+      color: white;
+      width: 15rem;
+      font-size: larger;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      text-shadow: black 3px 3px 1px;
+      background: #870f18;
+      font-family: "Yanone Kaffeesatz", sans-serif; }
+    .bus .buscador .boton {
+      width: 6rem;
+      font-size: larger;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px;
+      background: #870f18;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      transition: ease 1s all; }
+      .bus .buscador .boton:hover {
+        background-color: #91272e;
+        color: gold; }
+
+/*media querie de home page*/
+@media screen and (max-width: 420px) {
+  .mainContent {
+    grid-area: mainContent;
+    display: grid;
+    margin: 1%;
+    grid-template-rows: 170px 500px 370px;
+    grid-template-columns: 1fr;
+    grid-template-areas: "contentTitle" "liMain" "caballeroImg"; }
+    .mainContent .caballeroImg {
+      display: inline-block;
+      width: 300px;
+      position: relative;
+      left: 30px; }
+    .mainContent .contentTitle {
+      display: flex;
+      text-align: center;
+      align-items: center;
+      justify-content: center;
+      grid-area: contentTitle;
+      text-decoration: none;
+      font-family: "Alfa Slab One", cursive;
+      font-size: larger;
+      color: white;
+      text-shadow: black 3px 3px 1px; }
+    .mainContent .liMain {
+      grid-area: liMain;
+      font-size: larger;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column;
+      text-align: center; }
+  .bus {
+    grid-area: bus;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 50px 70px 300px 150px;
+    grid-template-areas: "buscadorTitle" "buscador" "magoElc" "pBuscador"; }
+    .bus .none {
+      grid-area: none; }
+    .bus .buscadorTitle {
+      grid-area: buscadorTitle;
+      font-family: "Alfa Slab One", cursive;
+      color: white;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      text-shadow: black 3px 3px 1px; }
+    .bus .magoElc {
+      width: 60%;
+      grid-area: magoElc;
+      display: inline-block;
+      margin: 0px auto; }
+    .bus .pBuscador {
+      text-align: center;
+      grid-area: pBuscador;
+      font-size: large;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px;
+      font-family: "Yanone Kaffeesatz", sans-serif; }
+    .bus .buscador {
+      grid-area: buscador;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      gap: 20px;
+      margin: 10px; }
+      .bus .buscador .formBuscador {
+        width: 50%;
+        font-size: larger;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        color: white;
+        text-shadow: black 3px 3px 1px;
+        background: #870f18;
+        font-family: "Yanone Kaffeesatz", sans-serif; } }
+
+.hTitle {
+  grid-area: hTitle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Alfa Slab One", cursive;
+  color: white;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  text-shadow: black 3px 3px 1px; }
+
+.primeraSeccion {
+  grid-area: primeraSeccion;
+  display: grid;
+  grid-template-columns: 1fr 3fr 3fr 1fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "none nombreDelMazo ejemplo" "none descripcionPrincipal ejemplo";
+  gap: 30px; }
+  .primeraSeccion .ejemplo {
+    grid-area: ejemplo;
+    border: solid black 2px;
+    border-radius: 20px;
+    display: inline-block;
+    width: 370px; }
+  .primeraSeccion .nombreDelMazo {
+    grid-area: nombreDelMazo;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: x-large;
+    color: white;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: black 3px 3px 1px; }
+  .primeraSeccion .descripcionPrincipal {
+    grid-area: descripcionPrincipal;
+    font-size: larger;
+    text-align: center;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    font-family: "Yanone Kaffeesatz", sans-serif; }
+
+.segundaSeccion {
+  grid-area: segundaSeccion;
+  display: grid;
+  grid-template-columns: 1fr 3fr 2fr;
+  grid-template-rows: 1fr 2fr;
+  grid-template-areas: "none tercerTitle imagenMonta" "none  descripcionMonta imagenMonta";
+  color: white; }
+  .segundaSeccion .tercerTitle {
+    grid-area: tercerTitle;
+    text-align: center;
+    font-family: 'Alfa Slab One', cursive;
+    font-size: x-large;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: black 3px 3px 1px; }
+  .segundaSeccion .descripcionMonta {
+    grid-area: descripcionMonta;
+    text-align: center;
+    font-size: larger;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: black 3px 3px 1px;
+    font-family: "Yanone Kaffeesatz", sans-serif; }
+  .segundaSeccion .imagenMonta {
+    grid-area: imagenMonta; }
+
+/*420px media querie de Mazos Page*/
+@media screen and (max-width: 420px) {
+  .hTitle {
+    grid-area: hTitle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Alfa Slab One", cursive;
+    font-size: x-large;
+    color: white;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: black 3px 3px 1px; }
+    .hTitle .subTitle {
+      text-align: center; }
+  .primeraSeccion {
+    grid-area: primeraSeccion;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 100px 200px 150px;
+    grid-template-areas: "nombreDelMazo" "ejemplo" "descripcionPrincipal"; }
+    .primeraSeccion .ejemplo {
+      grid-area: ejemplo;
+      border: solid black 2px;
+      border-radius: 10px;
+      width: auto;
+      margin: auto;
+      margin-top: 0%;
+      margin-bottom: 0%; }
+    .primeraSeccion .nombreDelMazo {
+      grid-area: nombreDelMazo;
+      font-family: 'Alfa Slab One', cursive;
+      font-size: x-large;
+      color: white;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      text-align: center;
+      text-shadow: black 3px 3px 1px; }
+    .primeraSeccion .descripcionPrincipal {
+      grid-area: descripcionPrincipal;
+      font-size: larger;
+      text-align: center;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px;
+      font-family: 'Yanone Kaffeesatz', sans-serif;
+      margin-top: 0%; }
+  .segundaSeccion {
+    grid-area: segundaSeccion;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 90px 2fr 1fr;
+    grid-template-areas: "tercerTitle" "imagenMonta" "descripcionMonta"; }
+    .segundaSeccion .tercerTitle {
+      grid-area: tercerTitle;
+      display: flex;
+      text-align: center;
+      font-family: "Alfa Slab One", cursive;
+      font-size: x-large;
+      color: white;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      text-shadow: black 3px 3px 1px; }
+    .segundaSeccion .imagenMonta {
+      grid-area: imagenMonta;
+      width: auto; }
+    .segundaSeccion .descripcionMonta {
+      grid-area: descripcionMonta;
+      text-align: center;
+      font-size: larger;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px;
+      font-family: "Yanone Kaffeesatz", sans-serif; } }
+
+.rTitle {
+  grid-area: rTitle;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: "Alfa Slab One", cursive;
+  font-size: x-large;
+  color: white;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  text-shadow: black 3px 3px 1px; }
+
+.formulario {
+  grid-area: formulario;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-family: "Yanone Kaffeesatz", sans-serif; }
+  .formulario .form {
+    padding: 5%;
+    font-size: 30px;
+    text-shadow: black 10px 5px 5px; }
+    .formulario .form .boton {
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-size: 25px;
+      background-color: #870f18;
+      padding: 3px;
+      color: white; }
+    .formulario .form .negro {
+      color: black;
+      font-size: 25px; }
+    .formulario .form .input {
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px; }
+
+/* 420px media querie Mazos Page */
+@media screen and (max-width: 420px) {
+  .subTitleR {
+    text-align: center;
+    font-size: x-large; }
+  .formulario {
+    display: flex;
+    flex-direction: column-reverse;
+    font-family: "Yanone Kaffeesatz", sans-serif; }
+    .formulario .rImg {
+      margin: auto; }
+    .formulario .form {
+      padding: 4%;
+      font-size: 40px;
+      text-shadow: black 10px 5px 5px; }
+      .formulario .form .boton {
+        display: inline-block;
+        position: relative;
+        left: 120px; }
+    .formulario .input {
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px; } }
+
+.nTitle {
+  grid-area: nTitle;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Alfa Slab One", cursive;
+  font-size: x-large;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  color: blanco;
+  text-shadow: black 3px 3px 1px;
+  color: white; }
+  .nTitle .nMain {
+    margin: auto; }
+
+.nLista {
+  grid-area: nLista;
+  display: grid;
+  margin: 2%;
+  grid-template-columns: 2fr 1fr;
+  grid-template-rows: 3fr 1fr;
+  grid-template-areas: "nliMain nImg" "nSaludos nSaludos"; }
+  .nLista .nImg {
+    grid-area: nImg; }
+  .nLista .nliMain {
+    grid-area: nliMain;
+    font-size: larger;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; }
+    .nLista .nliMain .nlista1 {
+      animation-name: nlista1;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s; }
+
+@keyframes nlista1 {
+  0% {
+    color: gold; }
+  90% {
+    color: white; } }
+    .nLista .nliMain .nlista2 {
+      animation-name: nlista2;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 4s;
+      animation-delay: 5s; }
+
+@keyframes nlista2 {
+  0% {
+    color: gold; }
+  90% {
+    color: white; } }
+    .nLista .nliMain .nlista3 {
+      animation-name: nlista3;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 4s;
+      animation-delay: 10s; }
+      .nLista .nliMain .nlista3 .linkDonaciones {
+        color: gold;
+        text-decoration: gold; }
+
+@keyframes nlista3 {
+  0% {
+    color: gold; }
+  90% {
+    color: white; } }
+    .nLista .nliMain .nlista4 {
+      animation-name: nlista4;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 4s;
+      animation-delay: 15s; }
+
+@keyframes nlista4 {
+  0% {
+    color: gold; }
+  90% {
+    color: white; } }
+  .nLista .nSaludos {
+    grid-area: nSaludos;
+    font-family: "Alfa Slab One", cursive;
+    font-size: x-large;
+    color: white;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    text-shadow: black 3px 3px 1px; }
+
+/* contenido de Nosotros */
+@media screen and (max-width: 420px) {
+  .nMain {
+    text-align: center; }
+  .nLista {
+    grid-area: nLista;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 600px 1fr;
+    grid-template-areas: "nliMain" "nImg" "nSaludos"; }
+    .nLista .nImg {
+      display: inline-block;
+      width: 350px;
+      position: relative;
+      left: 15px; }
+    .nLista .nliMain {
+      font-size: x-large;
+      text-align: center;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      display: flex;
+      justify-content: space-around;
+      flex-direction: column; } }
+
+/* Donaciones css */
+.dHeader {
+  grid-area: dHeader;
+  display: flex;
+  align-items: center;
+  text-decoration: none;
+  font-family: "Alfa Slab One", cursive;
+  font-size: x-large;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  color: white;
+  text-shadow: black 3px 3px 1px;
+  margin: 0px 10% 0px 10%; }
+  .dHeader .dTitle {
+    text-align: center; }
+
+.cajaPaypal {
+  grid-area: cajaPaypal;
+  width: 600px;
+  margin-left: 28%;
+  height: 280px;
+  background-color: #870f18;
+  border: black 2px solid; }
+  .cajaPaypal .dPaypal {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    gap: 20px;
+    font-family: "Yanone Kaffeesatz", sans-serif; }
+    .cajaPaypal .dPaypal .boton {
+      width: 6rem;
+      font-size: larger;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px;
+      background: #086aa7;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      transition: ease 1s all; }
+      .cajaPaypal .dPaypal .boton:hover {
+        background-color: #2977a8;
+        color: gold; }
+    .cajaPaypal .dPaypal .paypal {
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      font-size: 40px;
+      text-shadow: black 10px 5px 5px; }
+    .cajaPaypal .dPaypal .paypal1 {
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      font-size: larger; }
+    .cajaPaypal .dPaypal .importe {
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      font-size: 30px;
+      text-shadow: black 10px 5px 5px; }
+
+.duendeImg {
+  grid-area: duendeImg;
+  margin: auto; }
+
+.dSaludos {
+  grid-area: dSaludos;
+  font-family: "Alfa Slab One", cursive;
+  font-size: x-large;
+  color: white;
+  word-spacing: 2px;
+  letter-spacing: 1px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  text-shadow: black 3px 3px 1px; }
+
+@media screen and (max-width: 420px) {
+  .cajaPaypal {
+    width: 380px;
+    margin: 2%;
+    height: 280px;
+    background-color: #870f18;
+    border: black 2px solid; }
+    .cajaPaypal .dPaypal .paypal {
+      margin-top: 10px; }
+    .cajaPaypal .dPaypal .importe {
+      font-size: x-large; }
+    .cajaPaypal .dPaypal .boton {
+      width: 6rem;
+      font-size: larger;
+      word-spacing: 2px;
+      letter-spacing: 1px;
+      color: white;
+      text-shadow: black 3px 3px 1px;
+      background: #086aa7;
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      transition: ease 1s all; }
+      .cajaPaypal .dPaypal .boton:hover {
+        background-color: #2977a8;
+        color: gold; }
+  .duendeImg {
+    display: inline-block;
+    margin: 0px; } }
+
+.footer {
+  grid-area: footer; }
+  .footer .ulFooter {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    list-style-type: none; }
+    .footer .ulFooter .iconA {
+      transition: all 1s ease; }
+      .footer .ulFooter .iconA:hover {
+        transform: scale(1.5, 1.5);
+        filter: brightness(200%); }

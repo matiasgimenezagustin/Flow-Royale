@@ -1,0 +1,103 @@
+
+.nTitle{
+    grid-area: nTitle;
+    display: flex;
+    align-items: center;
+    text-decoration: none;
+    font-family: $ff-title;
+    font-size: x-large;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    color: blanco;
+    text-shadow: map-get($paleta, negro )  3px 3px 1px;
+    color: map-get($paleta, blanco );
+    .nMain{
+        margin: auto;
+    }
+}
+.nLista{
+    grid-area: nLista;
+    display: grid;
+    margin: 2%;
+    grid-template-columns: 2fr 1fr;
+    grid-template-rows: 3fr 1fr;
+    grid-template-areas: 
+    "nliMain nImg"
+    "nSaludos nSaludos"
+    ;
+    .nImg{
+        grid-area: nImg;
+    }
+    .nliMain{
+        grid-area: nliMain;
+        font-size: larger;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        color: map-get($paleta, blanco );
+        text-shadow: map-get($paleta, negro )  3px 3px 1px;
+        font-family: $ff-text;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        .nlista1{
+            animation-name: nlista1;
+            animation-iteration-count: initial;
+            animation-timing-function: ease-in;
+            animation-duration: 3s;  
+        }
+        @keyframes nlista1{
+            0%{color: map-get($paleta, dorado );}
+            90%{color: map-get($paleta, blanco );}
+        }
+        .nlista2{
+            animation-name: nlista2;
+            animation-iteration-count: initial;
+            animation-timing-function: ease-in;
+            animation-duration: 4s;  
+            animation-delay: 5s;
+        }
+        @keyframes nlista2{
+            0%{color: map-get($paleta, dorado );}
+            90%{color: map-get($paleta, blanco );}
+        }
+        .nlista3{
+            animation-name: nlista3;
+            animation-iteration-count: initial;
+            animation-timing-function: ease-in;
+            animation-duration: 4s;
+            animation-delay: 10s;  
+            .linkDonaciones{
+                color: map-get($paleta, dorado );
+                text-decoration: map-get($paleta, dorado);
+            }
+        }
+        @keyframes nlista3{
+            0%{color: map-get($paleta, dorado );}
+            90%{color: map-get($paleta, blanco );}
+        }
+        .nlista4{
+            animation-name: nlista4;
+            animation-iteration-count: initial;
+            animation-timing-function: ease-in;
+            animation-duration: 4s;  
+            animation-delay: 15s;
+        }
+        @keyframes nlista4{
+            0%{color: map-get($paleta, dorado );}
+            90%{color: map-get($paleta, blanco );}
+        }
+    }
+    .nSaludos{
+        grid-area: nSaludos;
+        font-family: $ff-title;
+        font-size: x-large;
+        color: map-get($paleta, blanco );
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        text-align: center;
+        text-shadow: map-get($paleta, negro )  3px 3px 1px;
+    }
+}

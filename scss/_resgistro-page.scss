@@ -1,0 +1,43 @@
+.rTitle{
+    grid-area: rTitle;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: $ff-title;
+    font-size: x-large;
+    color: map-get($paleta, blanco );
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: map-get($paleta, negro )  3px 3px 1px;
+}
+
+.formulario{
+    grid-area: formulario;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    font-family: $ff-text;
+    .form{
+        padding: 5%;
+        font-size: 30px;
+        text-shadow: map-get($paleta, negro )  10px 5px 5px;
+        
+        .boton{
+            font-family: $ff-text;
+            font-size: 25px;
+            background-color:  map-get($paleta, rojo );
+            padding: 3px;
+            color: map-get($paleta, blanco );
+        }
+        .negro{
+            color:map-get($paleta, negro ) ;
+            font-size: 25px;
+        }
+        .input{
+            word-spacing: 2px;
+            letter-spacing: 1px;
+            color: map-get($paleta, blanco );
+            text-shadow: map-get($paleta, negro )  3px 3px 1px;
+        }
+    }
+}

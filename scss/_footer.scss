@@ -1,0 +1,17 @@
+.footer{
+    grid-area: footer;
+    .ulFooter{
+        display: flex;
+        flex-direction: row;
+        justify-content: space-around;
+        align-items: center;
+        list-style-type: none;
+        .iconA{
+            transition: all 1s ease;
+            &:hover{
+                transform: scale(1.5, 1.5);
+                filter: brightness(200%);
+            }
+        }
+    }
+}

@@ -1,0 +1,105 @@
+
+/*media querie de home page*/
+
+@media screen and (max-width: 420px){
+    .mainContent{
+        grid-area: mainContent;
+        display: grid;
+        margin: 1%;
+        grid-template-rows: 170px 500px 370px;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "contentTitle"
+        "liMain"
+        "caballeroImg"
+        ;
+        .caballeroImg{
+            display: inline-block;
+            width: 300px;
+            position: relative;
+            left: 30px;
+        }
+        .contentTitle{
+            display: flex;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+            grid-area: contentTitle;
+            text-decoration: none;
+            font-family: $ff-title;
+            font-size: larger;
+            color: map-get($paleta, blanco );
+            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+        }
+        .liMain{
+            grid-area: liMain;
+            font-size: larger;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+            color: map-get($paleta, blanco );
+            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+            font-family: $ff-text;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+            text-align: center;
+        }
+    }
+    .bus{
+        grid-area: bus;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 50px 70px 300px 150px;
+        grid-template-areas: 
+        "buscadorTitle"
+        "buscador"
+        "magoElc"
+        "pBuscador"
+        ;
+        .none{
+            grid-area: none;
+        }
+        .buscadorTitle{
+            grid-area: buscadorTitle;
+            font-family: $ff-title;
+            color: map-get($paleta, blanco );
+            word-spacing: 2px;
+            letter-spacing: 1px;
+            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+        }
+        .magoElc{
+            width: 60%;
+            grid-area: magoElc;
+            display: inline-block;
+            margin: 0px auto;
+        }
+        .pBuscador{
+            text-align: center;
+            grid-area: pBuscador;
+            font-size: large;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+            color: map-get($paleta, blanco );
+            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+            font-family: $ff-text;
+        }
+        .buscador{
+            grid-area: buscador;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            gap: 20px;
+            margin: 10px;
+            .formBuscador{
+                width: 50%;
+                font-size: larger;
+                word-spacing: 2px;
+                letter-spacing: 1px;
+                color: map-get($paleta, blanco );
+                text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+                background: map-get($paleta, rojo );
+                font-family: $ff-text;
+            }
+        }
+    }
+}

@@ -1,0 +1,45 @@
+
+
+/*Navbar 420px SCSS*/
+
+@media screen and (max-width: 420px){
+    .navegador{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: map-get($paleta, rojo );
+        height: 280px;
+        width: 100%;
+        .mainTitle{
+            background-color: map-get($paleta, rojo );
+            width: 100%;
+            height: 30%;
+            font-family: $ff-title;
+            font-size: xx-large;
+            color: map-get($paleta, blanco );
+            word-spacing: 2px;
+            letter-spacing: 1px;
+            text-align: center;
+            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+        }
+        .cajaLinks{
+            width: 100%;
+            height: 70%;
+            background-color: map-get($paleta, azul );
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            .linkInterno{
+                text-decoration: none;
+                font-family: $ff-title;
+                font-size: large;
+                color: map-get($paleta, blanco );
+                word-spacing: 2px;
+                letter-spacing: 1px;
+                transition: all 1s ease;
+                text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+            }
+        }
+    }
+}

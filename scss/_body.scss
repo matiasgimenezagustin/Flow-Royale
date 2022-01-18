@@ -1,0 +1,87 @@
+
+/*body general*/
+
+body{
+    background-image: url(../imagenes/cr.png);
+}
+
+
+/*body de la Home Page*/
+
+.body{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 70px 6fr 4fr 1fr;
+    grid-template-areas: 
+    "navegador navegador navegador"
+    "mainContent mainContent mainContent"
+    "bus bus bus"
+    "footer footer footer"
+    ;
+    gap: 20px;
+}
+
+
+/*body de la pagina Mazos*/
+
+
+.body1{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr 3fr 2fr 1fr;
+    grid-template-areas: 
+    "navegador"
+    "hTitle"
+    "primeraSeccion"
+    "segundaSeccion"
+    "footer"
+    ;
+    gap: 30px;
+}
+
+/*body de la pagina Registro*/
+
+.body3{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr 2fr 1fr;
+    grid-template-areas: 
+    "navegador"
+    "rTitle"
+    "formulario"
+    "footer"
+    ;
+    gap: 20px;
+}
+
+/*body de la pagina Nosotros*/
+
+.body4{
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr 3fr 70px;
+    grid-template-areas: 
+    "navegador"
+    "nTitle"
+    "nLista"
+    "footer"
+    ;
+    gap: 30px;
+}
+
+/*body de la page Donaciones*/
+
+.body5{
+    background-image: url(../imagenes/cr.png);
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: 70px 1fr 1fr 200px 1fr;
+    grid-template-areas: 
+    "navegador"
+    "dHeader"
+    "cajaPaypal"
+    "duendeImg"
+    "dSaludos"
+    "footer"
+    ;
+}

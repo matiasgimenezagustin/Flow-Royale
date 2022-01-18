@@ -1,0 +1,36 @@
+@media screen and (max-width: 420px){
+    .cajaPaypal{
+        width: 380px;
+        margin: 2%;
+        height: 280px;
+        background-color: map-get($paleta, rojo );
+        border: map-get($paleta, negro ) 2px solid;
+        .dPaypal{
+            .paypal{
+                margin-top: 10px;
+            }
+            .importe{
+                font-size: x-large;
+            }
+            .boton{
+                width: 6rem;
+                font-size: larger;
+                word-spacing: 2px;
+                letter-spacing: 1px;
+                color: map-get($paleta, blanco );
+                text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+                background: map-get($paleta, azul );
+                font-family: $ff-text;
+                transition: ease 1s all;
+                &:hover{
+                    background-color: map-get($paleta, azul-claro );
+                    color: map-get($paleta, dorado );
+                }
+            }
+        }
+    }
+    .duendeImg{
+        display: inline-block;
+        margin: 0px;
+    }
+}

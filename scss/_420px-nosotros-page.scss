@@ -1,0 +1,36 @@
+
+/* contenido de Nosotros */
+@media screen and (max-width: 420px){
+    .nMain{
+        text-align: center;
+    }
+    .nLista{
+        grid-area: nLista;
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 600px 1fr;
+        grid-template-areas: 
+        "nliMain"
+        "nImg"
+        "nSaludos"
+        ;
+        .nImg{
+            display: inline-block;
+            width: 350px;
+            position: relative;
+            left: 15px;
+        }
+        .nliMain{
+            font-size: x-large;
+            text-align: center;
+            word-spacing: 2px;
+            letter-spacing: 1px;
+            color: map-get($paleta, blanco );
+            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+            font-family: $ff-text;
+            display: flex;
+            justify-content: space-around;
+            flex-direction: column;
+        }
+    }
+}

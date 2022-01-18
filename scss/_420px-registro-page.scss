@@ -1,0 +1,35 @@
+
+/* 420px media querie Mazos Page */
+
+
+@media screen and (max-width: 420px){
+
+    .subTitleR{
+        text-align: center;
+        font-size: x-large;
+    }
+    .formulario{
+        display: flex;
+        flex-direction: column-reverse;
+        font-family: $ff-text;
+        .rImg{
+        margin: auto;
+        }
+        .form{
+        padding: 4%;
+        font-size: 40px;
+        text-shadow:map-get($paleta, negro )  10px 5px 5px;
+        .boton{
+            display: inline-block;
+            position: relative;
+            left:120px;
+            }
+        }
+        .input{
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        color: map-get($paleta, blanco );
+        text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+        }
+    }
+}
