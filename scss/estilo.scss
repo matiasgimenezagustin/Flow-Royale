@@ -63,6 +63,78 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
 
 
 
+.navegadorPrueba{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    background-color: map-get($paleta, azul);
+    box-shadow: map-get($paleta, negro ) 2px 2px 5px;
+    .logoImg{
+        background-color: map-get($paleta, rojo );
+    }
+    .cajaLinks{
+        width: 75%;
+        display: flex;
+        flex-direction: row;
+        align-self: center;
+        justify-content: space-around;
+        align-items: center;
+        margin-bottom: 0;
+        .li{
+            list-style-type: none;
+            .linkInterno{
+                text-decoration: none;
+                font-family: 'Alfa Slab One', cursive;
+                font-size: medium;
+                color: map-get($paleta, blanco );
+                word-spacing: 2px;
+                letter-spacing: 1px;
+                transition: all 1s ease;
+                text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+                &:hover{
+                    font-size: large;
+                    color: map-get($paleta, dorado);
+                    text-shadow: map-get($paleta, negro ) 4px 4px 2px;
+                }
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 420px){
+    .navegadorPrueba{
+        position: relative;
+        display: flex;
+        flex-direction: column;
+        background-color: map-get($paleta, rojo );
+        height: 260px;
+        width: 100%;
+        .cajaLinks{
+            width: 100%;
+            height: 70%;
+            background-color: map-get($paleta, azul );
+            display: flex;
+            flex-direction: column;
+            justify-content: space-around;
+            align-items: center;
+            padding: 0;
+            margin-bottom: 0;
+            .linkInterno{
+                text-decoration: none;
+                font-family: $ff-title;
+                font-size: large;
+                color: map-get($paleta, blanco );
+                word-spacing: 2px;
+                letter-spacing: 1px;
+                transition: all 1s ease;
+                text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+            }
+        }
+    }
+}
+
 .hTitle{
     margin-top: 70px;
     h1{
@@ -200,11 +272,69 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
         }
     }
 }
+@media screen and (max-width: 420px){
+    .hTitle{
+        margin-top: 50px;
+        h1{
+            font-size: 2.3rem;
+        }
+    }
+    .seccionMazos{
+        margin-top: 50px;
+        .mazo{
+            .mainContent{
+                flex-direction: column;
+                width: 95%;
+                height: 40rem;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                .content{
+                    width: 95%;
+                    h3{
+                        font-size: 1.7rem;
+                        text-align: center;
+                        margin-top: 0;
+                    }
+                    .pMazoContainer{
+                        align-self: center;
+                    }
+                }
+                .containerMazo{
+                    img{
+                        width: 280px;
+                        height: 200px;
+                        margin-top: 0;
+                    }
+                }
+            }
+        }
+        .winCond{
+            width: 95%;
+            flex-direction: column;
+            height: 40rem;
+            img{
+                width: 68%;
+                order: 2;
+                height: auto;
+                align-self: center;
+            }
+            .contentWin{
+                order: 1;
+                width: 90%;
+                h3{
+                    font-size: 1.5rem;
+                }
+                .pCardContent{
+                    height: 13rem;
+                    h4{
+                        font-size:1.5rem;
+                    }
+                }
+            }
 
-.logoImg{
-    display: inline-block;
-    background-color: map-get($paleta, rojo );
-    width: 30%;
+        }
+    }
 }
 
 .bFooter{
@@ -238,6 +368,26 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
                     width: 50px;
                 }
             }
+        }
+    }
+}
+
+@media screen and (max-width: 420px){
+    .bFooter{
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        align-items: center;
+        height: auto;
+        box-shadow: map-get($paleta, negro ) 2px 1px 5px;
+        .flowRoyaleFooter{
+            width: 100%;
+        }
+        ul{
+            width: 100%;
+        }
+        .contactFooter{
+            font-size: 1.3rem;
         }
     }
 }
