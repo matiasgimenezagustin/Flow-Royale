@@ -3,27 +3,241 @@
 
 /*Vars SCSS*/
 
-$paleta: (azul:rgb(8, 106, 167), azul-claro:rgb(41, 119, 168), rojo:rgb(135, 15, 24), rojo-claro: rgb(145, 39, 46), blanco:rgb(255, 255, 255), dorado:rgb(255, 215, 0), negro: rgb(0,0,0));
+$paleta: (azul:rgb(8, 106, 167), azul-claro:rgb(41, 119, 168), rojo:rgb(135, 15, 24), rojo-claro: rgb(145, 39, 46), blanco:rgb(255, 255, 255), dorado:rgb(255, 215, 0), negro: rgb(0,0,0), gris:rgb(105, 101, 101), gris-claro:rgb(206, 195, 195));
 $ff-title:'Alfa Slab One', cursive;
 $ff-text:'Yanone Kaffeesatz', sans-serif;
+
+/*Mixins SCSS*/
+
+@mixin gradiant-legendary {
+    background: rgb(122,238,155);
+    background: linear-gradient(203deg, rgba(122,238,155,1) 0%, rgba(133,230,163,1) 48%, rgba(249,126,201,1) 100%);
+}
+@mixin button{
+    font-family: $ff-title;
+    font-size: 1.2rem;
+    border-radius: 10px;
+    border: map-get($paleta, gris ) solid 2px;
+    padding: 2px;
+}
+@mixin cajas-info{
+    border: outset map-get($paleta, gris ) 4px;
+    background-color: map-get($paleta, rojo );
+}
+@mixin flex-row-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+@mixin flex-column-center{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+@mixin title-style{
+    font-family: $ff-title;
+    color: map-get($paleta, blanco );
+    text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+    letter-spacing: 2px;
+}
 
 /*imports SCSS*/
 
 @import "reset";
-@import "body";
-@import "420px-body";
-@import "nav";
-@import "420px-navbar";
-@import "home-page";
-@import "420px-home-page";
-@import "mazos-page";
-@import "420px-mazos-page";
-@import "resgistro-page";
-@import "420px-registro-page";
-@import "nosotros-page";
-@import "420px-nosotros-page";
-@import "donaciones-page";
-@import "420px-donaciones-page";
-@import "footer";
+@import "desktop/body";
+@import "desktop/nav";
+@import "desktop/home-page";
+@import "desktop/mazos-page";
+@import "desktop/resgistro-page";
+@import "desktop/nosotros-page";
+@import "desktop/donaciones-page";
+@import "desktop/footer";
+@import "responsive-420px/420px-body";
+@import "responsive-420px/420px-navbar";
+@import "responsive-420px/420px-home-page";
+@import "responsive-420px/420px-mazos-page";
+@import "responsive-420px/420px-registro-page";
+@import "responsive-420px/420px-nosotros-page";
+@import "responsive-420px/420px-donaciones-page";
 
 
+
+.hTitle{
+    margin-top: 70px;
+    h1{
+        @include title-style;
+        font-size: 3rem;
+        text-align: center;
+    }
+}
+
+/*Scss de la seccion de mazos y win condition*/
+
+.seccionMazos{
+    margin-top: 80px;
+    @include flex-column-center;
+    gap: 50px;
+    margin-bottom: 50px;
+    /*caja de mazos*/
+    .mazo{
+        @include flex-column-center;
+        .mainContent{
+            width: 70%;
+            height: 23rem;
+            display: flex;
+            justify-content: space-around;
+            @include cajas-info;
+            .content{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                h3{
+                    margin-top: 20px;
+                    font-size: 2rem;
+                    @include title-style;
+                }
+                .pMazoContainer{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    font-family: $ff-text;
+                    font-size: 1.5rem;
+                    margin-top: 20px;
+                    flex-wrap: nowrap;
+                    overflow: auto;
+                    height: 14rem;
+                    color: map-get($paleta, negro );
+                    background-color: map-get($paleta, blanco );
+                    padding: 15px;
+                    border: map-get($paleta, gris ) inset;
+                    line-height: 1;
+                    ul{
+                        margin-left: 5px;
+                        li{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .containerMazo{
+                display: flex;
+                flex-direction: column;
+                img{
+                    display: inline-block;
+                    width:350px;
+                    height: 250px;
+                    margin-top: 50px;
+                    border-style: inset;
+                    border: map-get($paleta, gris ) inset;
+                    border-radius: 10px;
+                }
+                .bGuardar{
+                    @include gradiant-legendary;
+                    padding: 3px 3px 1px 3px;
+                    font-family: $ff-title;
+                    width: 7rem;
+                    align-self: flex-end;
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    @include button;
+                }
+            }
+        }
+    }
+    /*caja del win condition*/
+    .winCond{
+        width: 60%;
+        height: 300px;
+        display: flex;
+        @include cajas-info;
+        img{
+            display: inline-block;
+            width: 200px;
+            height: 250px;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .contentWin{
+            margin-top: 30px;
+            margin-left: 20px;
+            width: 60%;
+            h3{
+                @include title-style;
+                font-size: 2rem;
+                margin-bottom: 10px;
+                letter-spacing: 1px;
+            }
+            .pCardContent{
+                font-family: $ff-text;
+                color: map-get($paleta, negro );
+                background-color: map-get($paleta, blanco );
+                font-size: 1.5rem;
+                height: 160px;
+                padding: 15px;
+                border: map-get($paleta, gris ) inset;
+                flex-wrap: nowrap;
+                overflow: auto;
+                line-height: 1;
+                h4{
+                    font-weight: bold;
+                }
+                div{
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    margin-top: 10px;
+                    .legendaria{
+                        @include gradiant-legendary;
+                        @include button;
+                    }
+                    .arena{
+                        background-color: map-get($paleta, azul-claro );
+                        @include button;
+                    }
+                }
+            }
+        }
+    }
+}
+
+.logoImg{
+    display: inline-block;
+    background-color: map-get($paleta, rojo );
+    width: 30%;
+}
+
+.bFooter{
+    background-color: map-get($paleta, azul );
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    height: 70px;
+    .contactFooter{
+        font-size: 1.5rem;
+        margin-top: 20px;
+        margin-left: 10px;
+        @include title-style;
+    }
+    .flowRoyaleFooter{
+        display: inline-block;
+        width: 300px;
+        padding: 10px;
+        background-color: map-get($paleta, rojo );
+    }
+    ul{
+        width: 50%;
+        display: flex;
+        justify-content: space-evenly;
+        li{
+            list-style-type: none;
+            a{
+                img{
+                    margin-top: 20px;
+                    display: inline-block;
+                    width: 50px;
+                }
+            }
+        }
+    }
+}

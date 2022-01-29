@@ -9,16 +9,22 @@
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
-    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" 
+    rel="stylesheet">
+    <!--Bootstrap Css-->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="../css/estilo.css">
+
+    <!--Favicon-->
+    <link rel="icon" href="../favicon.ico">
+
+    <!--Title de la pagina-->
     <title>Flow Royale</title>
 </head>
 <body class="body1">
     <!--Navegador en SCSS-->
     <nav class="navegador">
-        <h2 class="mainTitle">
-            Flow Royale
-        </h2>
+        <img src="../imagenes/flow-royale-logo.png" alt="logo de Flow Royale" class="logoImg">
         <ul class="cajaLinks">
             <!--Links del nav-->
             <li class="li">
@@ -40,44 +46,114 @@
     </nav>
     <!--Header en SCSS de Mazos Page-->
     <header class="hTitle">
-        <h1 class="subTitle">
+        <h1>
             Mazos Populares
         </h1>
     </header>
     <!--Sections en SCSS de Mazos Page-->
-    <section class="primeraSeccion">
-        <img class="ejemplo" src="../imagenes/mazo.jpg" alt="mazo-de-ejemplo">
-        <h3 class="nombreDelMazo">
-            Ciclado de montapuercos
-        </h3>
-        <P class="descripcionPrincipal">Lorem ipsum dolor sit, amet consectetur adipisicing elit. Laboriosam atque cupiditate, molestias sunt, nihil a, ipsum rem minus odit eveniet incidunt! Blanditiis pariatur eos consequuntur, ullam quisquam fugit temporibus deserunt?</P>
-    </section>        
-    <section class="segundaSeccion">
-        <h3 class="tercerTitle">
-            Condición de Victoria
-        </h3>
-        <img src="../imagenes/monta.png" alt="imagen-de-montapuercos" width="190px" class="imagenMonta">
-        <p class="descripcionMonta">Lorem ipsum dolor sit amet consectetur adipisicing elit. Nesciunt ipsam temporibus natus praesentium! Corrupti inventore molestias similique temporibus earum illo facilis eveniet enim deserunt ducimus, libero a, repellendus assumenda porro.</p>
+    <section class="seccionMazos">
+        <!--aqui empieza el primer mazo con su win condition-->
+        <div class="mazo">
+            <div class="mainContent">
+                <div class="content">
+                    <h3>
+                        ElectroBandida
+                    </h3>
+                    <div class="pMazoContainer">
+                        <p>
+                            El P.E.K.K.A y la Bandida son de mucha importancia en este mazo, ya que las demás cartas seleccionadas se enfocan principalmente en la defensa, y van a ser las responsables de abrirle paso hacia las torres y evitar que sean en eliminados en el intento. Tal vez es algo lento avanzar con este mazo, pero te podemos asegurar que es efectivo.
+                        </p>
+                        <ul>
+                            <li>Mago Eléctrico.</li>
+                            <li>Bandida.</li>
+                            <li>Duende Lanzadardos.</li>
+                            <li>Bola de Fuego.</li>
+                            <li>P.E.K.K.A.</li>
+                            <li>Ariete de Batalla.</li>
+                            <li>Descarga.</li>
+                            <li>Electrocutadores.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="containerMazo">
+                    <img src="../imagenes/Mazo-Mago-Eléctrico.jpg" alt="Mazo de ciclado de montapuercos Clash Royale">
+                    <button class="bGuardar">
+                        Guardar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="winCond">
+            <img src="../imagenes/carta1.png" alt=" Carta de Mago Electrico Clash Royale">
+            <div class="contentWin">
+                <h3>Win Condition: </h3>
+                <div class="pCardContent">
+                    <h4>Mago Electrico</h4>
+                    <p>Aterriza con un estruendo, aturde a los enemigos cercanos y lanza rayos con ambas manos. Le encanta ser el centro de atención...</p>
+                    <div>
+                        <h4 class="legendaria">legendaria</h4>
+                        <h4 class="arena">arena 11</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!--aqui empieza el segundo mazo con su win condition-->
+        <div class="mazo">
+            <div class="mainContent">
+                <div class="content">
+                    <h3>
+                        Mazo 3x PEKKA
+                    </h3>
+                    <div class="pMazoContainer">
+                        <p>
+                            Con estas tropas seleccionadas tienes la capacidad de hacer ataques sumamente fuertes para dañar tanto a muchas unidades enemigas, como a las torres. De hecho, haciendo buenos combos invocando a varios guerreros, seguro que vas a poder obtener victorias muy rápidas y efectivas. Aunque hay que considerar que aquí no cuentas con muchas unidades aéreas.
+                        </p>
+                        <ul>
+                            <li>Mago de Hielo.</li>
+                            <li>P.E.K.K.A.</li>
+                            <li>Príncipe Oscuro.</li>
+                            <li>Tronco.</li>
+                            <li>Megaesbirro.</li>
+                            <li>Cementerio.</li>
+                            <li>Veneno.</li>
+                            <li>Mago Eléctrico.</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="containerMazo">
+                    <img src="../imagenes/3x-PEKKA-Graveyard.jpg" alt="Mazo de ciclado de montapuercos Clash Royale">
+                    <button class="bGuardar">
+                        guardar
+                    </button>
+                </div>
+            </div>
+        </div>
+        <div class="winCond">
+            <img src="../imagenes/mago-de-hielo.png" alt=" Carta de Mega Caballero Clash Royale" class="mago-de-hielo">
+            <div class="contentWin">
+                <h3>Win Condition: </h3>
+                <div class="pCardContent">
+                    <h4>Mago de Hielo</h4>
+                    <p>Este señor tan frio dispara fragmentos de hielo a sus enemigos y ralentiza su velocidad de movimiento y de ataque. Aunque él sea un témpano de hielo, su bigote hace que suba la temperatura en la arena.</p>
+                    <div>
+                        <h4 class="legendaria">legendaria</h4>
+                        <h4 class="arena">arena 8</h4>
+                    </div>
+                </div>
+            </div>
+        </div>
     </section>
     <!--Footer en SCSS-->
-    <footer class="footer">
-        <ul class="ulFooter">
-            <li class="footerLi">
-                <a class="insta" href="http://www.instagram.com">
-                    <img class="iconA" src="../imagenes/instagram.png" alt="Instagram Icono" width="35px">
-                </a>
-            </li>
-            <li class="footerLi">
-                <a href="#">
-                    <img class="iconA" src="../imagenes/whatsapp.png" alt="Whatsapp Icono" width="35px">
-                </a>
-            </li>
-            <li class="footerLi">
-                <a href="#">
-                    <img class="iconA" src="../imagenes/gmail.png" alt="Gmail Icono" width="40px">
-                </a>
-            </li>
+    <footer class="bFooter">
+        <h3 class="contactFooter">Puedes Contactarme En:</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/matute_gimenez_agustin/"><img src="../imagenes/instagram.png" alt=""></a></li>
+            <li><a href="https://github.com/matiasgimenezagustin"><img src="../imagenes/github.png" alt=""></a></li>
         </ul>
+        <img class="flowRoyaleFooter" src="../imagenes/flow-royale-logo.png" alt="Logo de Flow Royale">
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
