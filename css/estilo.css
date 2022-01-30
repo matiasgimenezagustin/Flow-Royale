@@ -787,36 +787,6 @@ body {
   90% {
     color: white; } }
 
-.bus {
-  grid-area: bus;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr;
-  grid-template-areas: "buscadorTitle buscadorTitle buscadorTitle" "none buscador magoElc" "none pBuscador magoElc";
-  color: white; }
-  .bus .none {
-    grid-area: none; }
-  .bus .buscadorTitle {
-    grid-area: buscadorTitle;
-    display: flex;
-    justify-content: center;
-    font-family: "Alfa Slab One", cursive;
-    color: white;
-    text-shadow: black 3px 3px 1px;
-    letter-spacing: 2px;
-    font-size: 1.7rem; }
-  .bus .magoElc {
-    grid-area: magoElc; }
-  .bus .pBuscador {
-    display: flex;
-    justify-content: center;
-    grid-area: pBuscador;
-    font-size: large;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    text-shadow: black 3px 3px 1px;
-    font-family: "Yanone Kaffeesatz", sans-serif; }
-
 .buscadorTitle {
   margin-top: 50px; }
   .buscadorTitle h3 {
@@ -903,6 +873,39 @@ body {
           border-radius: 10px;
           border: black solid 2px;
           padding: 2px; }
+
+@media screen and (max-width: 420px) {
+  .winCond {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 50px;
+    height: auto; }
+    .winCond img {
+      margin-top: 10px; }
+    .winCond .contentWin {
+      width: 100%;
+      margin-left: 0; }
+      .winCond .contentWin .buscador .formBuscador {
+        width: 10rem; }
+      .winCond .contentWin .buscador .boton {
+        font-size: 1.2rem; }
+      .winCond .contentWin .pCardContent {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px; }
+  .mainContent {
+    grid-area: mainContent;
+    display: grid;
+    grid-template-rows: 1fr 2fr 4fr;
+    grid-template-columns: 1fr;
+    grid-template-areas: "contentTitle" "caballeroImg" "liMain"; }
+    .mainContent .caballeroImg {
+      display: inline-block;
+      margin: auto;
+      margin-left: 0; } }
 
 .navegadorPrueba {
   width: 100%;

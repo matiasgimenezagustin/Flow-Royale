@@ -185,41 +185,7 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
         }
     }
 }
-.bus{
-    grid-area: bus;
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 1fr 1fr 2fr;
-    grid-template-areas: 
-    "buscadorTitle buscadorTitle buscadorTitle"
-    "none buscador magoElc"
-    "none pBuscador magoElc"
-    ;
-    color: map-get($paleta, blanco );
-    .none{
-        grid-area: none;
-    }
-    .buscadorTitle{
-        grid-area: buscadorTitle;
-        display: flex;
-        justify-content: center;
-        @include title-style;
-        font-size: 1.7rem;
-    }
-    .magoElc{
-        grid-area: magoElc;
-    }
-    .pBuscador{
-        display: flex;
-        justify-content: center;
-        grid-area: pBuscador;
-        font-size: large;
-        word-spacing: 2px;
-        letter-spacing: 1px;
-        text-shadow: map-get($paleta, negro ) 3px 3px 1px;
-        font-family: $ff-text;
-    }
-}
+
 .buscadorTitle{
     margin-top: 50px;
     h3{
@@ -296,6 +262,50 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
                     @include button;
                 }
             }
+        }
+    }
+}
+@media screen and(max-width: 420px){
+    .winCond{
+        @include flex-column-center;
+        width: 90%;
+        margin-top: 50px;
+        height: auto;
+        img{
+            margin-top: 10px;
+        }
+        .contentWin{
+            width: 100%;
+            margin-left: 0;
+            .buscador{
+                .formBuscador{
+                    width: 10rem;
+                }
+                .boton{
+                    font-size: 1.2rem;
+                }
+            }
+            .pCardContent{
+                width: 90%;
+                margin: auto;
+                margin-bottom: 10px;
+            }
+        }
+    }
+    .mainContent{
+        grid-area: mainContent;
+        display: grid;
+        grid-template-rows: 1fr 2fr 4fr;
+        grid-template-columns: 1fr; 
+        grid-template-areas: 
+        "contentTitle"
+        "caballeroImg"
+        "liMain"
+        ;
+        .caballeroImg{
+            display: inline-block;
+            margin: auto;
+            margin-left: 0;
         }
     }
 }
