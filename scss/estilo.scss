@@ -266,6 +266,9 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
     }
 }
 @media screen and(max-width: 420px){
+    .homeCarrusel{
+        width: 95%
+    }
     .winCond{
         @include flex-column-center;
         width: 90%;
