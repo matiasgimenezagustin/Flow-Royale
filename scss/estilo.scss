@@ -1,9 +1,8 @@
 
 
-
 /*Vars SCSS*/
 
-$paleta: (azul:rgb(8, 106, 167), azul-claro:rgb(41, 119, 168), rojo:rgb(135, 15, 24), rojo-claro: rgb(145, 39, 46), blanco:rgb(255, 255, 255), dorado:rgb(255, 215, 0), negro: rgb(0,0,0), gris:rgb(105, 101, 101), gris-claro:rgb(206, 195, 195));
+$paleta: (azul:rgb(8, 106, 167), azul-claro:rgb(41, 119, 168), rojo:rgb(135, 15, 24), rojo-claro: rgb(145, 39, 46), blanco:rgb(255, 255, 255), dorado:rgb(255, 215, 0), negro: rgb(0,0,0), gris:rgb(100, 88, 88), gris-claro:rgb(206, 195, 195), naranja: rgb(255, 185, 35));
 $ff-title:'Alfa Slab One', cursive;
 $ff-text:'Yanone Kaffeesatz', sans-serif;
 
@@ -13,16 +12,32 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
     background: rgb(122,238,155);
     background: linear-gradient(203deg, rgba(122,238,155,1) 0%, rgba(133,230,163,1) 48%, rgba(249,126,201,1) 100%);
 }
+@mixin gradient-legendary-animation{
+    background: rgb(245,110,192);
+    background: linear-gradient(217deg, rgba(245,110,192,1) 0%, rgba(133,230,163,1) 51%, rgba(122,238,115,1) 100%);
+}
+@mixin gradiant-legendary-middle-animation {
+    background: rgb(133,230,163);
+    background: linear-gradient(217deg, rgba(133,230,163,1) 0%, rgba(255,137,209,1) 51%, rgba(122,238,115,1) 100%);
+}
 @mixin button{
     font-family: $ff-title;
     font-size: 1.2rem;
     border-radius: 10px;
-    border: map-get($paleta, gris ) solid 2px;
+    border: map-get($paleta, negro ) solid 2px;
     padding: 2px;
 }
 @mixin cajas-info{
     border: outset map-get($paleta, gris ) 4px;
     background-color: map-get($paleta, rojo );
+}
+@mixin caja-gradiante {
+    background: rgb(135,15,24);
+    background: linear-gradient(203deg, rgba(135,15,24,1) 0%, rgba(112,11,27,1) 58%, rgba(84,10,15,1) 100%);
+    border: outset map-get($paleta, gris ) 4px;
+}
+@mixin caja-normal{
+    background-color: map-get($paleta, naranja );
 }
 @mixin flex-row-center{
     display: flex;
@@ -40,6 +55,16 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
     color: map-get($paleta, blanco );
     text-shadow: map-get($paleta, negro ) 3px 3px 1px;
     letter-spacing: 2px;
+}
+@mixin text-style{
+    font-family: $ff-text;
+    color: map-get($paleta, negro );
+    background-color: map-get($paleta, blanco );
+}
+@mixin animacion-focus {
+    animation-iteration-count: initial;
+    animation-timing-function: ease-in;
+    animation-duration: 3s;  
 }
 
 /*imports SCSS*/
@@ -61,7 +86,219 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
 @import "responsive-420px/420px-nosotros-page";
 @import "responsive-420px/420px-donaciones-page";
 
+.homeCarrusel{
+    width: 90%;
+    margin: auto;
+    margin-top: 50px;
+    padding: 2%;
+    @include caja-gradiante;
+    .carousel-inner{
+        .foto{
+            border: map-get($paleta, gris ) inset;
+        }
+    }
+}
 
+.mainContent{
+    grid-area: mainContent;
+    display: grid;
+    grid-template-rows: 1fr 2fr;
+    grid-template-columns: 1fr 2fr; 
+    grid-template-areas: 
+    "caballeroImg contentTitle"
+    "caballeroImg liMain"
+    ;
+    color: map-get($paleta, blanco);
+    margin-top: 50px;
+    .caballeroImg{
+        grid-area: caballeroImg;
+        display: inline-block;
+        margin: auto;
+    }
+    .contentTitle{
+        display: flex;
+        align-items: center;
+        grid-area: contentTitle;
+        text-decoration: none;
+        @include  title-style;
+        font-family: $ff-title;
+        font-size: 2.5rem;
+    }
+    .liMain{
+        grid-area: liMain;
+        font-size: 1.5rem;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+        font-family: $ff-text;
+        display: flex;
+        justify-content: space-around;
+        flex-direction: column;
+        .lista1{
+            animation-name: lista1;
+            @include animacion-focus;  
+        }
+        @keyframes lista1{
+            0%{color: map-get($paleta, dorado );}
+            25%{font-size: 1.6rem;}
+            90%{color: map-get($paleta, blanco );}
+        }
+        .lista2{
+            animation-name: lista2;
+            @include animacion-focus;  
+            animation-delay: 8s;
+        }
+        @keyframes lista2{
+            0%{color: map-get($paleta, dorado );}
+            25%{font-size: 1.6rem;}
+            90%{color: map-get($paleta, blanco );}
+        }
+        .lista3{
+            animation-name: lista3;
+            @include animacion-focus;
+            animation-delay: 12s;  
+        }
+        @keyframes lista3{
+            0%{color: map-get($paleta, dorado );}
+            25%{font-size: 1.6rem;}
+            90%{color: map-get($paleta, blanco );}
+        }
+        .lista4{
+            animation-name: lista4;
+            @include animacion-focus;
+            animation-delay: 16s;
+        }
+        @keyframes lista4{
+            0%{color: map-get($paleta, dorado );}
+            25%{font-size: 1.6rem;}
+            90%{color: map-get($paleta, blanco );}
+        }
+        .lista5{
+            animation-name: lista5;
+            @include animacion-focus;
+            animation-delay: 20s; 
+        }
+        @keyframes lista5{
+            0%{color: map-get($paleta, dorado );}
+            25%{font-size: 1.6rem;}
+            90%{color: map-get($paleta, blanco );}
+        }
+    }
+}
+.bus{
+    grid-area: bus;
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 1fr 1fr 2fr;
+    grid-template-areas: 
+    "buscadorTitle buscadorTitle buscadorTitle"
+    "none buscador magoElc"
+    "none pBuscador magoElc"
+    ;
+    color: map-get($paleta, blanco );
+    .none{
+        grid-area: none;
+    }
+    .buscadorTitle{
+        grid-area: buscadorTitle;
+        display: flex;
+        justify-content: center;
+        @include title-style;
+        font-size: 1.7rem;
+    }
+    .magoElc{
+        grid-area: magoElc;
+    }
+    .pBuscador{
+        display: flex;
+        justify-content: center;
+        grid-area: pBuscador;
+        font-size: large;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+        font-family: $ff-text;
+    }
+}
+.buscadorTitle{
+    margin-top: 50px;
+    h3{
+        @include title-style;
+        text-align: center;
+        font-size: 1.8rem;
+    }
+}
+.winCond{
+    width: 60%;
+    margin: auto;
+    margin-top: 40px;
+    margin-bottom: 50px;
+    height: 300px;
+    display: flex;
+    @include cajas-info;
+    img{
+        display: inline-block;
+        width: 200px;
+        height: 250px;
+        margin-top: 30px;
+        margin-left: 10px;
+    }
+    .contentWin{
+        margin-top: 30px;
+        margin-left: 20px;
+        width: 60%;
+        .buscador{
+            @include flex-row-center;
+            gap: 30px;
+            margin-bottom: 20px;
+            .formBuscador{
+                @include text-style;
+                width: 17rem;
+                font-size: 1.7rem;
+                background: map-get($paleta, blanco );
+                border: inset map-get($paleta, gris ) 4px;
+            }
+            .boton{
+                @include button;
+                @include gradient-legendary-animation;
+                transition: all 1s;
+                &:hover{
+                    border: solid map-get($paleta, dorado ) 2px;
+                }
+            }
+            
+        }
+        .pCardContent{
+            font-family: $ff-text;
+            color: map-get($paleta, negro );
+            background-color: map-get($paleta, blanco );
+            font-size: 1.5rem;
+            height: 160px;
+            padding: 15px;
+            border: map-get($paleta, gris ) inset;
+            flex-wrap: nowrap;
+            overflow: auto;
+            line-height: 1;
+            h4{
+                font-weight: bold;
+            }
+            div{
+                display: flex;
+                justify-content: center;
+                gap: 20px;
+                margin-top: 10px;
+                .normal{
+                    @include caja-normal;
+                    @include button;
+                }
+                .arena{
+                    background-color: map-get($paleta, azul-claro );
+                    @include button;
+                }
+            }
+        }
+    }
+}
 
 .navegadorPrueba{
     width: 100%;
@@ -173,17 +410,15 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
                     display: flex;
                     flex-direction: column;
                     gap: 10px;
-                    font-family: $ff-text;
                     font-size: 1.5rem;
                     margin-top: 20px;
                     flex-wrap: nowrap;
                     overflow: auto;
                     height: 14rem;
-                    color: map-get($paleta, negro );
-                    background-color: map-get($paleta, blanco );
                     padding: 15px;
                     border: map-get($paleta, gris ) inset;
                     line-height: 1;
+                    @include text-style;
                     ul{
                         margin-left: 5px;
                         li{
@@ -343,6 +578,7 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
     justify-content: space-between;
     align-items: center;
     height: 70px;
+    box-shadow: black 5px 3px 5px;
     .contactFooter{
         font-size: 1.5rem;
         margin-top: 20px;

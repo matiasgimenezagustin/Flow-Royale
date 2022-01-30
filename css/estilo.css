@@ -11,14 +11,21 @@
 body {
   background-image: url(../imagenes/cr.png); }
 
-/*body de la Home Page*/
-.body {
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 70px 6fr 4fr 1fr;
-  grid-template-areas: "navegador navegador navegador" "mainContent mainContent mainContent" "bus bus bus" "footer footer footer";
-  gap: 20px; }
+/*body de la Home Page
 
+.body{
+    display: grid;
+    grid-template-columns: 1fr 2fr 1fr;
+    grid-template-rows: 70px 6fr 4fr 1fr;
+    grid-template-areas: 
+    "navegador navegador navegador"
+    "mainContent mainContent mainContent"
+    "bus bus bus"
+    "footer footer footer"
+    ;
+    gap: 20px;
+}
+*/
 /*body de la pagina Mazos
 
 
@@ -101,165 +108,6 @@ body {
           font-size: large;
           color: gold;
           text-shadow: black 4px 4px 2px; }
-
-.mainContent {
-  grid-area: mainContent;
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas: "caballeroImg contentTitle" "caballeroImg liMain";
-  color: white; }
-  .mainContent .caballeroImg {
-    grid-area: caballeroImg;
-    display: flex;
-    align-items: center;
-    justify-content: center; }
-  .mainContent .contentTitle {
-    display: flex;
-    align-items: center;
-    grid-area: contentTitle;
-    text-decoration: none;
-    font-family: "Alfa Slab One", cursive;
-    font-size: x-large;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    text-shadow: black 3px 3px 1px; }
-  .mainContent .liMain {
-    grid-area: liMain;
-    font-size: larger;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    text-shadow: black 3px 3px 1px;
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column; }
-    .mainContent .liMain .lista1 {
-      animation-name: lista1;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s; }
-
-@keyframes lista1 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 20px; }
-  90% {
-    color: white; } }
-    .mainContent .liMain .lista2 {
-      animation-name: lista2;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s;
-      animation-delay: 4s; }
-
-@keyframes lista2 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 20px; }
-  90% {
-    color: white; } }
-    .mainContent .liMain .lista3 {
-      animation-name: lista3;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s;
-      animation-delay: 8s; }
-
-@keyframes lista3 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 20px; }
-  90% {
-    color: white; } }
-    .mainContent .liMain .lista4 {
-      animation-name: lista4;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s;
-      animation-delay: 12s; }
-
-@keyframes lista4 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 20px; }
-  90% {
-    color: white; } }
-    .mainContent .liMain .lista5 {
-      animation-name: lista5;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s;
-      animation-delay: 16s; }
-
-@keyframes lista5 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 20px; }
-  90% {
-    color: white; } }
-
-.bus {
-  grid-area: bus;
-  display: grid;
-  grid-template-columns: 1fr 2fr 1fr;
-  grid-template-rows: 1fr 1fr 2fr;
-  grid-template-areas: "buscadorTitle buscadorTitle buscadorTitle" "none buscador magoElc" "none pBuscador magoElc";
-  color: white; }
-  .bus .none {
-    grid-area: none; }
-  .bus .buscadorTitle {
-    grid-area: buscadorTitle;
-    font-family: 'Alfa Slab One', cursive;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-    text-shadow: black 3px 3px 1px; }
-  .bus .magoElc {
-    grid-area: magoElc; }
-  .bus .pBuscador {
-    display: flex;
-    justify-content: center;
-    grid-area: pBuscador;
-    font-size: large;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    text-shadow: black 3px 3px 1px;
-    font-family: "Yanone Kaffeesatz", sans-serif; }
-  .bus .buscador {
-    grid-area: buscador;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 30px; }
-    .bus .buscador .formBuscador {
-      color: white;
-      width: 15rem;
-      font-size: larger;
-      word-spacing: 2px;
-      letter-spacing: 1px;
-      text-shadow: black 3px 3px 1px;
-      background: #870f18;
-      font-family: "Yanone Kaffeesatz", sans-serif; }
-    .bus .buscador .boton {
-      width: 6rem;
-      font-size: larger;
-      word-spacing: 2px;
-      letter-spacing: 1px;
-      color: white;
-      text-shadow: black 3px 3px 1px;
-      background: #870f18;
-      font-family: "Yanone Kaffeesatz", sans-serif;
-      transition: ease 1s all; }
-      .bus .buscador .boton:hover {
-        background-color: #91272e;
-        color: gold; }
 
 .rTitle {
   grid-area: rTitle;
@@ -488,12 +336,19 @@ body {
 
 /*media queries de los body*/
 @media screen and (max-width: 420px) {
-  .body {
-    background-image: url(../imagenes/cr.png);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 340px 1100px 4fr 60px;
-    grid-template-areas: "navegador" "mainContent" "bus" "footer"; }
+  /*
+    .body{
+        background-image: url(../imagenes/cr.png);
+        display: grid;
+        grid-template-columns: 1fr;
+        grid-template-rows: 340px 1100px 4fr 60px;
+        grid-template-areas: 
+        "navegador"
+        "mainContent"
+        "bus"
+        "footer"
+        ;
+    }*/
   .body3 {
     background-image: url(../imagenes/cr.png);
     display: grid;
@@ -818,6 +673,237 @@ body {
     display: inline-block;
     margin: 0px; } }
 
+.homeCarrusel {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 2%;
+  background: #870f18;
+  background: linear-gradient(203deg, #870f18 0%, #700b1b 58%, #540a0f 100%);
+  border: outset #645858 4px; }
+  .homeCarrusel .carousel-inner .foto {
+    border: #645858 inset; }
+
+.mainContent {
+  grid-area: mainContent;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "caballeroImg contentTitle" "caballeroImg liMain";
+  color: white;
+  margin-top: 50px; }
+  .mainContent .caballeroImg {
+    grid-area: caballeroImg;
+    display: inline-block;
+    margin: auto; }
+  .mainContent .contentTitle {
+    display: flex;
+    align-items: center;
+    grid-area: contentTitle;
+    text-decoration: none;
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    font-family: "Alfa Slab One", cursive;
+    font-size: 2.5rem; }
+  .mainContent .liMain {
+    grid-area: liMain;
+    font-size: 1.5rem;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: black 3px 3px 1px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; }
+    .mainContent .liMain .lista1 {
+      animation-name: lista1;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s; }
+
+@keyframes lista1 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista2 {
+      animation-name: lista2;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 8s; }
+
+@keyframes lista2 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista3 {
+      animation-name: lista3;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 12s; }
+
+@keyframes lista3 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista4 {
+      animation-name: lista4;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 16s; }
+
+@keyframes lista4 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista5 {
+      animation-name: lista5;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 20s; }
+
+@keyframes lista5 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+
+.bus {
+  grid-area: bus;
+  display: grid;
+  grid-template-columns: 1fr 2fr 1fr;
+  grid-template-rows: 1fr 1fr 2fr;
+  grid-template-areas: "buscadorTitle buscadorTitle buscadorTitle" "none buscador magoElc" "none pBuscador magoElc";
+  color: white; }
+  .bus .none {
+    grid-area: none; }
+  .bus .buscadorTitle {
+    grid-area: buscadorTitle;
+    display: flex;
+    justify-content: center;
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    font-size: 1.7rem; }
+  .bus .magoElc {
+    grid-area: magoElc; }
+  .bus .pBuscador {
+    display: flex;
+    justify-content: center;
+    grid-area: pBuscador;
+    font-size: large;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: black 3px 3px 1px;
+    font-family: "Yanone Kaffeesatz", sans-serif; }
+
+.buscadorTitle {
+  margin-top: 50px; }
+  .buscadorTitle h3 {
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 1.8rem; }
+
+.winCond {
+  width: 60%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  height: 300px;
+  display: flex;
+  border: outset #645858 4px;
+  background-color: #870f18; }
+  .winCond img {
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    margin-top: 30px;
+    margin-left: 10px; }
+  .winCond .contentWin {
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 60%; }
+    .winCond .contentWin .buscador {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 20px; }
+      .winCond .contentWin .buscador .formBuscador {
+        font-family: "Yanone Kaffeesatz", sans-serif;
+        color: black;
+        background-color: white;
+        width: 17rem;
+        font-size: 1.7rem;
+        background: white;
+        border: inset #645858 4px; }
+      .winCond .contentWin .buscador .boton {
+        font-family: "Alfa Slab One", cursive;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        border: black solid 2px;
+        padding: 2px;
+        background: #f56ec0;
+        background: linear-gradient(217deg, #f56ec0 0%, #85e6a3 51%, #7aee73 100%);
+        transition: all 1s; }
+        .winCond .contentWin .buscador .boton:hover {
+          border: solid gold 2px; }
+    .winCond .contentWin .pCardContent {
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      color: black;
+      background-color: white;
+      font-size: 1.5rem;
+      height: 160px;
+      padding: 15px;
+      border: #645858 inset;
+      flex-wrap: nowrap;
+      overflow: auto;
+      line-height: 1; }
+      .winCond .contentWin .pCardContent h4 {
+        font-weight: bold; }
+      .winCond .contentWin .pCardContent div {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px; }
+        .winCond .contentWin .pCardContent div .normal {
+          background-color: #ffb923;
+          font-family: "Alfa Slab One", cursive;
+          font-size: 1.2rem;
+          border-radius: 10px;
+          border: black solid 2px;
+          padding: 2px; }
+        .winCond .contentWin .pCardContent div .arena {
+          background-color: #2977a8;
+          font-family: "Alfa Slab One", cursive;
+          font-size: 1.2rem;
+          border-radius: 10px;
+          border: black solid 2px;
+          padding: 2px; }
+
 .navegadorPrueba {
   width: 100%;
   height: 70px;
@@ -911,7 +997,7 @@ body {
       height: 23rem;
       display: flex;
       justify-content: space-around;
-      border: outset #696565 4px;
+      border: outset #645858 4px;
       background-color: #870f18; }
       .seccionMazos .mazo .mainContent .content {
         width: 50%;
@@ -928,17 +1014,17 @@ body {
           display: flex;
           flex-direction: column;
           gap: 10px;
-          font-family: "Yanone Kaffeesatz", sans-serif;
           font-size: 1.5rem;
           margin-top: 20px;
           flex-wrap: nowrap;
           overflow: auto;
           height: 14rem;
-          color: black;
-          background-color: white;
           padding: 15px;
-          border: #696565 inset;
-          line-height: 1; }
+          border: #645858 inset;
+          line-height: 1;
+          font-family: "Yanone Kaffeesatz", sans-serif;
+          color: black;
+          background-color: white; }
           .seccionMazos .mazo .mainContent .content .pMazoContainer ul {
             margin-left: 5px; }
             .seccionMazos .mazo .mainContent .content .pMazoContainer ul li {
@@ -952,7 +1038,7 @@ body {
           height: 250px;
           margin-top: 50px;
           border-style: inset;
-          border: #696565 inset;
+          border: #645858 inset;
           border-radius: 10px; }
         .seccionMazos .mazo .mainContent .containerMazo .bGuardar {
           background: #7aee9b;
@@ -966,13 +1052,13 @@ body {
           font-family: "Alfa Slab One", cursive;
           font-size: 1.2rem;
           border-radius: 10px;
-          border: #696565 solid 2px;
+          border: black solid 2px;
           padding: 2px; }
   .seccionMazos .winCond {
     width: 60%;
     height: 300px;
     display: flex;
-    border: outset #696565 4px;
+    border: outset #645858 4px;
     background-color: #870f18; }
     .seccionMazos .winCond img {
       display: inline-block;
@@ -999,7 +1085,7 @@ body {
         font-size: 1.5rem;
         height: 160px;
         padding: 15px;
-        border: #696565 inset;
+        border: #645858 inset;
         flex-wrap: nowrap;
         overflow: auto;
         line-height: 1; }
@@ -1016,14 +1102,14 @@ body {
             font-family: "Alfa Slab One", cursive;
             font-size: 1.2rem;
             border-radius: 10px;
-            border: #696565 solid 2px;
+            border: black solid 2px;
             padding: 2px; }
           .seccionMazos .winCond .contentWin .pCardContent div .arena {
             background-color: #2977a8;
             font-family: "Alfa Slab One", cursive;
             font-size: 1.2rem;
             border-radius: 10px;
-            border: #696565 solid 2px;
+            border: black solid 2px;
             padding: 2px; }
 
 @media screen and (max-width: 420px) {
@@ -1076,7 +1162,8 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  height: 70px; }
+  height: 70px;
+  box-shadow: black 5px 3px 5px; }
   .bFooter .contactFooter {
     font-size: 1.5rem;
     margin-top: 20px;

@@ -10,16 +10,16 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="./css/estilo.css">
     <link rel="icon" href="./favicon.ico">
     <title>Flow Royale Home Page</title>
 </head>
 <body class="body">
     <!--Navegador en SCSS-->
-    <nav class="navegador">
-        <h2 class="mainTitle">
-            Flow Royale
-        </h2>
+    <nav class="navegadorPrueba">
+        
+        <img src="./imagenes/flow-royale-logo.png" alt="" class="logoImg">
         <!--Links del nav-->
         <ul class="cajaLinks">
             <li class="li">
@@ -39,14 +39,51 @@
             </li>
         </ul>
     </nav>
-    
-    <!--Main content en SCSS -->
 
+    <!--Header Section en SCSS-->
+
+    <header class="hTitle">
+        <h1>
+            Bienvenidos a Flow Royale
+        </h1>
+    </header>
+
+    <!--Carrusel de Bootstrap-->
+
+    <div id="carouselExampleIndicators" class="carousel slide homeCarrusel" data-bs-ride="carousel">
+        <div class="carousel-indicators">
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="1" aria-label="Slide 2"></button>
+            <button type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide-to="2" aria-label="Slide 3"></button>
+        </div>
+        <div class="carousel-inner">
+            <div class="carousel-item active foto">
+                <img src="./imagenes/foto-para-carrusel-5.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item foto">
+                <img src="./imagenes/foto-para-carrusel-2.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item foto">
+                <img src="./imagenes/foto-para-carrusel-3.png" class="d-block w-100" alt="...">
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+    <!--Main content en SCSS -->
     <main class="mainContent">
         <img src="./imagenes/caballero.png" alt="Caballero Clash Royale" class="caballeroImg">
-        <h1 class="contentTitle">
+        <h2 class="contentTitle">
             ¿Qué Ofrecemos en Flow Royale?
-        </h1>
+        </h2>
         <ul class="liMain">
             <li class="lista1">
                 Mantente actualizado en los mazos y nuevos metas en tiempo real.
@@ -65,46 +102,56 @@
             </li>
         </ul>
     </main>
-    <!--Buscador de cartas en SCSS-->
-    <div class="bus">
-        <div class="none"></div>
-        <h2 class="buscadorTitle">
+
+
+    <!--Buscador de cartas-->
+
+
+    <div class="buscadorTitle">
+        <h3>
             Buscador de Cartas:
-        </h2>
-        <img src="./imagenes/carta1.png" alt="clash royale" class="magoElc" width="170px">
-        <p class="pBuscador">Lorem, ipsum dolor sit amet consectetur adipisicing elit. Debitis mollitia iure similique pariatur magni voluptatum sint rerum soluta labore exercitationem cumque quisquam est temporibus dolores, nihil a atque reprehenderit autem!</p>
-        <form class="buscador">
-            <select name="" id="#" class="formBuscador">
-                <option value="magoElectrico">Mago Eléctrico</option>
-                <option value="montapuercos">Montapuercos</option>
-                <option value="pekka">P.E.K.K.A.</option>
-                <option value="murcielagos">Murcielagos</option>
-                <option value="chispitas">Chispitas</option>
-                <option value="giganteNoble">Gigante Noble</option>
-                <option value="mago">Mago</option>
-            </select>
-            <input type="submit" value="buscar" class="boton">
-        </form>
+        </h3>
+    </div>
+    <div class="winCond">
+        <img src="./imagenes/cartas/mago.png" alt=" Carta de Mago Clash Royale" class="mago-de-hielo">
+        <div class="contentWin">
+            <form class="buscador">
+                <select name="" id="#" class="formBuscador">
+                    <option value="magoElectrico">Mago </option>
+                    <option value="montapuercos">Montapuercos</option>
+                    <option value="pekka">P.E.K.K.A.</option>
+                    <option value="murcielagos">Murcielagos</option>
+                    <option value="chispitas">Chispitas</option>
+                    <option value="giganteNoble">Gigante Noble</option>
+                    <option value="mago">Mago Electrico</option>
+                </select>
+                <input type="submit" value="Buscar" class="boton">
+            </form>
+            <div class="pCardContent">
+                <h4>Mago de Fuego</h4>
+                <p>El mago, el tipo más maravilloso que ha pisado la arena, te hará volar por los aires con su guapearía....y sus bolas de fuego.</p>
+                <div>
+                    <h4 class="normal">
+                        Normal
+                    </h4>
+                    <h4 class="arena">
+                        Arena 5
+                    </h4>
+                </div>
+            </div>
+        </div>
     </div>
     <!--Footer en SCSS-->
-    <footer class="footer">
-        <ul class="ulFooter">
-            <li class="footerLi">
-                <a class="insta" href="http://www.instagram.com">
-                    <img class="iconA" src="./imagenes/instagram.png" alt="Instagram Icono" width="35px">
-                </a>
-            </li>
-            <li class="footerLi">
-                <a href="#">
-                    <img class="iconA" src="./imagenes/whatsapp.png" alt="Whatsapp Icono" width="35px">
-                </a>
-            </li>
-            <li class="footerLi">
-                <a href="#">
-                    <img class="iconA" src="./imagenes/gmail.png" alt="Gmail Icono" width="40px">
-                </a>
-            </li>
+    <footer class="bFooter">
+        <h3 class="contactFooter">Puedes Contactarme En:</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/matute_gimenez_agustin/"><img src="./imagenes/instagram.png" alt=""></a></li>
+            <li><a href="https://github.com/matiasgimenezagustin"><img src="./imagenes/github.png" alt=""></a></li>
         </ul>
+        <img class="flowRoyaleFooter" src="./imagenes/flow-royale-logo.png" alt="Logo de Flow Royale">
     </footer>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
 </body>
 </html>
