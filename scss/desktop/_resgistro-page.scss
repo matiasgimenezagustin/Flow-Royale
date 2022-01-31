@@ -1,43 +1,26 @@
-.rTitle{
-    grid-area: rTitle;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    font-family: $ff-title;
-    font-size: x-large;
-    color: map-get($paleta, blanco );
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    text-shadow: map-get($paleta, negro )  3px 3px 1px;
-}
+/* Registro page*/
 
 .formulario{
-    grid-area: formulario;
-    display: flex;
-    flex-direction: row;
-    justify-content: center;
-    font-family: $ff-text;
+    @include flex-row-center;
+    @include text-style-white;
+    margin-top: 60px;
+    margin-bottom: 70px;
     .form{
         padding: 5%;
-        font-size: 30px;
-        text-shadow: map-get($paleta, negro )  10px 5px 5px;
-        
         .boton{
-            font-family: $ff-text;
-            font-size: 25px;
-            background-color:  map-get($paleta, rojo );
-            padding: 3px;
-            color: map-get($paleta, blanco );
+            @include button;
+            @include gradiant-legendary-middle-animation;
+            transition: 1s all ease;
+            font-size: 1.3rem;
+            &:hover{
+                border: map-get($paleta, dorado ) solid 2px;
+            }
         }
         .negro{
-            color:map-get($paleta, negro ) ;
-            font-size: 25px;
+            font-size: 1.5rem;
         }
         .input{
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            color: map-get($paleta, blanco );
-            text-shadow: map-get($paleta, negro )  3px 3px 1px;
+            font-size: 2rem;
         }
     }
 }

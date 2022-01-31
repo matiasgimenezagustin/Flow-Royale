@@ -1,0 +1,126 @@
+/*Scss de la seccion de mazos y win condition*/
+
+.seccionMazos{
+    margin-top: 80px;
+    @include flex-column-center;
+    gap: 50px;
+    margin-bottom: 50px;
+    /*caja de mazos*/
+    .mazo{
+        @include flex-column-center;
+        .mainContent{
+            width: 70%;
+            height: 23rem;
+            display: flex;
+            justify-content: space-around;
+            @include cajas-info;
+            .content{
+                width: 50%;
+                display: flex;
+                flex-direction: column;
+                h3{
+                    margin-top: 20px;
+                    font-size: 2rem;
+                    @include title-style;
+                }
+                .pMazoContainer{
+                    display: flex;
+                    flex-direction: column;
+                    gap: 10px;
+                    font-size: 1.5rem;
+                    margin-top: 20px;
+                    flex-wrap: nowrap;
+                    overflow: auto;
+                    height: 14rem;
+                    padding: 15px;
+                    border: map-get($paleta, gris ) inset;
+                    line-height: 1;
+                    @include text-style;
+                    ul{
+                        margin-left: 5px;
+                        li{
+                            font-weight: bold;
+                        }
+                    }
+                }
+            }
+            .containerMazo{
+                display: flex;
+                flex-direction: column;
+                img{
+                    display: inline-block;
+                    width:350px;
+                    height: 250px;
+                    margin-top: 50px;
+                    border-style: inset;
+                    border: map-get($paleta, gris ) inset;
+                    border-radius: 10px;
+                }
+                .bGuardar{
+                    @include gradiant-legendary;
+                    padding: 3px 3px 1px 3px;
+                    font-family: $ff-title;
+                    width: 7rem;
+                    align-self: flex-end;
+                    margin-top: 10px;
+                    margin-right: 20px;
+                    @include button;
+                }
+            }
+        }
+    }
+    /*caja del win condition*/
+    .winCond{
+        width: 60%;
+        height: 300px;
+        display: flex;
+        @include cajas-info;
+        img{
+            display: inline-block;
+            width: 200px;
+            height: 250px;
+            margin-top: 30px;
+            margin-left: 10px;
+        }
+        .contentWin{
+            margin-top: 30px;
+            margin-left: 20px;
+            width: 60%;
+            h3{
+                @include title-style;
+                font-size: 2rem;
+                margin-bottom: 10px;
+                letter-spacing: 1px;
+            }
+            .pCardContent{
+                font-family: $ff-text;
+                color: map-get($paleta, negro );
+                background-color: map-get($paleta, blanco );
+                font-size: 1.5rem;
+                height: 160px;
+                padding: 15px;
+                border: map-get($paleta, gris ) inset;
+                flex-wrap: nowrap;
+                overflow: auto;
+                line-height: 1;
+                h4{
+                    font-weight: bold;
+                }
+                div{
+                    display: flex;
+                    justify-content: center;
+                    gap: 20px;
+                    margin-top: 10px;
+                    .legendaria{
+                        @include gradiant-legendary;
+                        @include button;
+                    }
+                    .arena{
+                        background-color: map-get($paleta, azul-claro );
+                        @include button;
+                    }
+                }
+            }
+        }
+    }
+}

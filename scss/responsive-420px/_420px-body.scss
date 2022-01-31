@@ -6,32 +6,6 @@
 
 
 @media screen and (max-width: 420px){
-    /*
-    .body{
-        background-image: url(../imagenes/cr.png);
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 340px 1100px 4fr 60px;
-        grid-template-areas: 
-        "navegador"
-        "mainContent"
-        "bus"
-        "footer"
-        ;
-    }*/
-    .body3{
-        background-image: url(../imagenes/cr.png);
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 340px 100px 2fr 60px;
-        grid-template-areas: 
-        "navegador"
-        "rTitle"
-        "formulario"
-        "footer"
-        ;
-        gap: 20px;
-    }
     .body4{
         background-image: url(../imagenes/cr.png);
         display: grid;

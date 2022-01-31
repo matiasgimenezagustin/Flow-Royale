@@ -1,104 +1,69 @@
 
-/*420px media querie de Mazos Page
+/*420px media querie de Mazos Page*/
+
 
 
 @media screen and (max-width: 420px){
     .hTitle{
-        grid-area: hTitle;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $ff-title;
-        font-size: x-large;
-        color: map-get($paleta, blanco );
-        word-spacing: 2px;
-        letter-spacing: 1px;
-        text-shadow: map-get($paleta, negro )  3px 3px 1px;
-        .subTitle{
-            text-align: center;
+        margin-top: 50px;
+        h1{
+            font-size: 2.3rem;
         }
     }
-    .primeraSeccion{
-        grid-area: primeraSeccion;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px 200px 150px;
-        grid-template-areas: 
-        "nombreDelMazo"
-        "ejemplo"
-        "descripcionPrincipal"
-        ;
-        .ejemplo{
-            grid-area: ejemplo;
-            border: solid map-get($paleta, negro )  2px;
-            border-radius: 10px;
-            width: auto;
-            margin: auto;
-            margin-top: 0%;
-            margin-bottom: 0%;
+    .seccionMazos{
+        margin-top: 50px;
+        .mazo{
+            .mainContent{
+                flex-direction: column;
+                width: 95%;
+                height: 40rem;
+                align-items: center;
+                justify-content: center;
+                gap: 30px;
+                .content{
+                    width: 95%;
+                    h3{
+                        font-size: 1.7rem;
+                        text-align: center;
+                        margin-top: 0;
+                    }
+                    .pMazoContainer{
+                        align-self: center;
+                    }
+                }
+                .containerMazo{
+                    img{
+                        width: 280px;
+                        height: 200px;
+                        margin-top: 0;
+                    }
+                }
+            }
         }
-        .nombreDelMazo{
-            grid-area: nombreDelMazo;
-            font-family: 'Alfa Slab One', cursive;
-            font-size: x-large;
-            color: white;
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            text-shadow: map-get($paleta, negro )  3px 3px 1px;
-        }
-        .descripcionPrincipal{
-            grid-area: descripcionPrincipal;
-            font-size: larger;
-            text-align: center;
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            color: white;
-            text-shadow: map-get($paleta, negro )  3px 3px 1px;
-            font-family: 'Yanone Kaffeesatz', sans-serif;
-            margin-top: 0%;
-        }
-    }
-    .segundaSeccion{
-        grid-area: segundaSeccion;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 90px 2fr 1fr;
-        grid-template-areas: 
-        "tercerTitle"
-        "imagenMonta"
-        "descripcionMonta"
-        ;
-        .tercerTitle{
-            grid-area: tercerTitle;
-            align-self: center;
-            text-align: center;
-            font-family: $ff-title;
-            font-size: x-large;
-            color: map-get($paleta, blanco );
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
-        }
-        .imagenMonta{
-            grid-area: imagenMonta;
-            width: 300px;
-            display: inline-block;
-            margin-left: 10%;
-        }
-        .descripcionMonta{
-            grid-area: descripcionMonta;
-            text-align: center;
-            font-size: larger;
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            color: map-get($paleta, blanco );
-            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
-            font-family: $ff-text;
+        .winCond{
+            width: 95%;
+            flex-direction: column;
+            height: 40rem;
+            img{
+                width: 68%;
+                order: 2;
+                height: auto;
+                align-self: center;
+            }
+            .contentWin{
+                order: 1;
+                width: 90%;
+                h3{
+                    font-size: 1.5rem;
+                }
+                .pCardContent{
+                    height: 13rem;
+                    h4{
+                        font-size:1.5rem;
+                    }
+                }
+            }
+
         }
     }
-}    
-*/
+}

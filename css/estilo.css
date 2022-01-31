@@ -11,45 +11,6 @@
 body {
   background-image: url(../imagenes/cr.png); }
 
-/*body de la Home Page
-
-.body{
-    display: grid;
-    grid-template-columns: 1fr 2fr 1fr;
-    grid-template-rows: 70px 6fr 4fr 1fr;
-    grid-template-areas: 
-    "navegador navegador navegador"
-    "mainContent mainContent mainContent"
-    "bus bus bus"
-    "footer footer footer"
-    ;
-    gap: 20px;
-}
-*/
-/*body de la pagina Mazos
-
-
-.body1{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 70px 1fr 3fr 2fr 1fr;
-    grid-template-areas: 
-    "navegador"
-    "hTitle"
-    "primeraSeccion"
-    "segundaSeccion"
-    "footer"
-    ;
-    gap: 30px;
-}*/
-/*body de la pagina Registro*/
-.body3 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70px 1fr 2fr 1fr;
-  grid-template-areas: "navegador" "rTitle" "formulario" "footer";
-  gap: 20px; }
-
 /*body de la pagina Nosotros*/
 .body4 {
   display: grid;
@@ -109,42 +70,418 @@ body {
           color: gold;
           text-shadow: black 4px 4px 2px; }
 
-.rTitle {
-  grid-area: rTitle;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  font-family: "Alfa Slab One", cursive;
-  font-size: x-large;
-  color: white;
-  word-spacing: 2px;
-  letter-spacing: 1px;
-  text-shadow: black 3px 3px 1px; }
-
-.formulario {
-  grid-area: formulario;
+.navegadorPrueba {
+  width: 100%;
+  height: 70px;
   display: flex;
   flex-direction: row;
-  justify-content: center;
-  font-family: "Yanone Kaffeesatz", sans-serif; }
-  .formulario .form {
-    padding: 5%;
-    font-size: 30px;
-    text-shadow: black 10px 5px 5px; }
-    .formulario .form .boton {
+  justify-content: space-between;
+  background-color: #086aa7;
+  box-shadow: black 2px 2px 5px; }
+  .navegadorPrueba .logoImg {
+    background-color: #870f18; }
+  .navegadorPrueba .cajaLinks {
+    width: 75%;
+    display: flex;
+    flex-direction: row;
+    align-self: center;
+    justify-content: space-around;
+    align-items: center;
+    margin-bottom: 0; }
+    .navegadorPrueba .cajaLinks .li {
+      list-style-type: none; }
+      .navegadorPrueba .cajaLinks .li .linkInterno {
+        text-decoration: none;
+        font-family: 'Alfa Slab One', cursive;
+        font-size: medium;
+        color: white;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        transition: all 1s ease;
+        text-shadow: black 3px 3px 1px; }
+        .navegadorPrueba .cajaLinks .li .linkInterno:hover {
+          font-size: large;
+          color: gold;
+          text-shadow: black 4px 4px 2px; }
+
+/*titulo de la pagina*/
+.hTitle {
+  margin-top: 70px; }
+  .hTitle h1 {
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    font-size: 3rem;
+    text-align: center; }
+
+/*contenido principal de la home page*/
+.homeCarrusel {
+  width: 90%;
+  margin: auto;
+  margin-top: 50px;
+  padding: 2%;
+  background: #870f18;
+  background: linear-gradient(203deg, #870f18 0%, #700b1b 58%, #540a0f 100%);
+  border: outset #645858 4px; }
+  .homeCarrusel .carousel-inner .foto {
+    border: #645858 inset; }
+
+.mainContent {
+  grid-area: mainContent;
+  display: grid;
+  grid-template-rows: 1fr 2fr;
+  grid-template-columns: 1fr 2fr;
+  grid-template-areas: "caballeroImg contentTitle" "caballeroImg liMain";
+  color: white;
+  margin-top: 50px; }
+  .mainContent .caballeroImg {
+    grid-area: caballeroImg;
+    display: inline-block;
+    margin: auto; }
+  .mainContent .contentTitle {
+    display: flex;
+    align-items: center;
+    grid-area: contentTitle;
+    text-decoration: none;
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    font-family: "Alfa Slab One", cursive;
+    font-size: 2.5rem; }
+  .mainContent .liMain {
+    grid-area: liMain;
+    font-size: 1.5rem;
+    word-spacing: 2px;
+    letter-spacing: 1px;
+    text-shadow: black 3px 3px 1px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: column; }
+    .mainContent .liMain .lista1 {
+      animation-name: lista1;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s; }
+
+@keyframes lista1 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista2 {
+      animation-name: lista2;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 8s; }
+
+@keyframes lista2 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista3 {
+      animation-name: lista3;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 12s; }
+
+@keyframes lista3 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista4 {
+      animation-name: lista4;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 16s; }
+
+@keyframes lista4 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+    .mainContent .liMain .lista5 {
+      animation-name: lista5;
+      animation-iteration-count: initial;
+      animation-timing-function: ease-in;
+      animation-duration: 3s;
+      animation-delay: 20s; }
+
+@keyframes lista5 {
+  0% {
+    color: gold; }
+  25% {
+    font-size: 1.6rem; }
+  90% {
+    color: white; } }
+
+/*buscador de imagenes de la home page*/
+.buscadorTitle {
+  margin-top: 50px; }
+  .buscadorTitle h3 {
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    text-align: center;
+    font-size: 1.8rem; }
+
+.winCond {
+  width: 60%;
+  margin: auto;
+  margin-top: 40px;
+  margin-bottom: 50px;
+  height: 300px;
+  display: flex;
+  border: outset #645858 4px;
+  background-color: #870f18; }
+  .winCond img {
+    display: inline-block;
+    width: 200px;
+    height: 250px;
+    margin-top: 30px;
+    margin-left: 10px; }
+  .winCond .contentWin {
+    margin-top: 30px;
+    margin-left: 20px;
+    width: 60%; }
+    .winCond .contentWin .buscador {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      gap: 30px;
+      margin-bottom: 20px; }
+      .winCond .contentWin .buscador .formBuscador {
+        font-family: "Yanone Kaffeesatz", sans-serif;
+        color: black;
+        background-color: white;
+        width: 17rem;
+        font-size: 1.7rem;
+        background: white;
+        border: inset #645858 4px; }
+      .winCond .contentWin .buscador .boton {
+        font-family: "Alfa Slab One", cursive;
+        font-size: 1.2rem;
+        border-radius: 10px;
+        border: black solid 2px;
+        padding: 2px;
+        background: #f56ec0;
+        background: linear-gradient(217deg, #f56ec0 0%, #85e6a3 51%, #7aee73 100%);
+        transition: all 1s; }
+        .winCond .contentWin .buscador .boton:hover {
+          border: solid gold 2px; }
+    .winCond .contentWin .pCardContent {
       font-family: "Yanone Kaffeesatz", sans-serif;
-      font-size: 25px;
-      background-color: #870f18;
-      padding: 3px;
-      color: white; }
-    .formulario .form .negro {
       color: black;
-      font-size: 25px; }
+      background-color: white;
+      font-size: 1.5rem;
+      height: 160px;
+      padding: 15px;
+      border: #645858 inset;
+      flex-wrap: nowrap;
+      overflow: auto;
+      line-height: 1; }
+      .winCond .contentWin .pCardContent h4 {
+        font-weight: bold; }
+      .winCond .contentWin .pCardContent div {
+        display: flex;
+        justify-content: center;
+        gap: 20px;
+        margin-top: 10px; }
+        .winCond .contentWin .pCardContent div .normal {
+          background-color: #ffb923;
+          font-family: "Alfa Slab One", cursive;
+          font-size: 1.2rem;
+          border-radius: 10px;
+          border: black solid 2px;
+          padding: 2px; }
+        .winCond .contentWin .pCardContent div .arena {
+          background-color: #2977a8;
+          font-family: "Alfa Slab One", cursive;
+          font-size: 1.2rem;
+          border-radius: 10px;
+          border: black solid 2px;
+          padding: 2px; }
+
+/*Scss de la seccion de mazos y win condition*/
+.seccionMazos {
+  margin-top: 80px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 50px;
+  margin-bottom: 50px;
+  /*caja de mazos*/
+  /*caja del win condition*/ }
+  .seccionMazos .mazo {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center; }
+    .seccionMazos .mazo .mainContent {
+      width: 70%;
+      height: 23rem;
+      display: flex;
+      justify-content: space-around;
+      border: outset #645858 4px;
+      background-color: #870f18; }
+      .seccionMazos .mazo .mainContent .content {
+        width: 50%;
+        display: flex;
+        flex-direction: column; }
+        .seccionMazos .mazo .mainContent .content h3 {
+          margin-top: 20px;
+          font-size: 2rem;
+          font-family: "Alfa Slab One", cursive;
+          color: white;
+          text-shadow: black 3px 3px 1px;
+          letter-spacing: 2px; }
+        .seccionMazos .mazo .mainContent .content .pMazoContainer {
+          display: flex;
+          flex-direction: column;
+          gap: 10px;
+          font-size: 1.5rem;
+          margin-top: 20px;
+          flex-wrap: nowrap;
+          overflow: auto;
+          height: 14rem;
+          padding: 15px;
+          border: #645858 inset;
+          line-height: 1;
+          font-family: "Yanone Kaffeesatz", sans-serif;
+          color: black;
+          background-color: white; }
+          .seccionMazos .mazo .mainContent .content .pMazoContainer ul {
+            margin-left: 5px; }
+            .seccionMazos .mazo .mainContent .content .pMazoContainer ul li {
+              font-weight: bold; }
+      .seccionMazos .mazo .mainContent .containerMazo {
+        display: flex;
+        flex-direction: column; }
+        .seccionMazos .mazo .mainContent .containerMazo img {
+          display: inline-block;
+          width: 350px;
+          height: 250px;
+          margin-top: 50px;
+          border-style: inset;
+          border: #645858 inset;
+          border-radius: 10px; }
+        .seccionMazos .mazo .mainContent .containerMazo .bGuardar {
+          background: #7aee9b;
+          background: linear-gradient(203deg, #7aee9b 0%, #85e6a3 48%, #f97ec9 100%);
+          padding: 3px 3px 1px 3px;
+          font-family: "Alfa Slab One", cursive;
+          width: 7rem;
+          align-self: flex-end;
+          margin-top: 10px;
+          margin-right: 20px;
+          font-family: "Alfa Slab One", cursive;
+          font-size: 1.2rem;
+          border-radius: 10px;
+          border: black solid 2px;
+          padding: 2px; }
+  .seccionMazos .winCond {
+    width: 60%;
+    height: 300px;
+    display: flex;
+    border: outset #645858 4px;
+    background-color: #870f18; }
+    .seccionMazos .winCond img {
+      display: inline-block;
+      width: 200px;
+      height: 250px;
+      margin-top: 30px;
+      margin-left: 10px; }
+    .seccionMazos .winCond .contentWin {
+      margin-top: 30px;
+      margin-left: 20px;
+      width: 60%; }
+      .seccionMazos .winCond .contentWin h3 {
+        font-family: "Alfa Slab One", cursive;
+        color: white;
+        text-shadow: black 3px 3px 1px;
+        letter-spacing: 2px;
+        font-size: 2rem;
+        margin-bottom: 10px;
+        letter-spacing: 1px; }
+      .seccionMazos .winCond .contentWin .pCardContent {
+        font-family: "Yanone Kaffeesatz", sans-serif;
+        color: black;
+        background-color: white;
+        font-size: 1.5rem;
+        height: 160px;
+        padding: 15px;
+        border: #645858 inset;
+        flex-wrap: nowrap;
+        overflow: auto;
+        line-height: 1; }
+        .seccionMazos .winCond .contentWin .pCardContent h4 {
+          font-weight: bold; }
+        .seccionMazos .winCond .contentWin .pCardContent div {
+          display: flex;
+          justify-content: center;
+          gap: 20px;
+          margin-top: 10px; }
+          .seccionMazos .winCond .contentWin .pCardContent div .legendaria {
+            background: #7aee9b;
+            background: linear-gradient(203deg, #7aee9b 0%, #85e6a3 48%, #f97ec9 100%);
+            font-family: "Alfa Slab One", cursive;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            border: black solid 2px;
+            padding: 2px; }
+          .seccionMazos .winCond .contentWin .pCardContent div .arena {
+            background-color: #2977a8;
+            font-family: "Alfa Slab One", cursive;
+            font-size: 1.2rem;
+            border-radius: 10px;
+            border: black solid 2px;
+            padding: 2px; }
+
+/* Registro page*/
+.formulario {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-family: "Yanone Kaffeesatz", sans-serif;
+  color: white;
+  text-shadow: black 3px 3px 1px;
+  margin-top: 60px;
+  margin-bottom: 70px; }
+  .formulario .form {
+    padding: 5%; }
+    .formulario .form .boton {
+      font-family: "Alfa Slab One", cursive;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      border: black solid 2px;
+      padding: 2px;
+      background: #85e6a3;
+      background: linear-gradient(217deg, #85e6a3 0%, #ff89d1 51%, #7aee73 100%);
+      transition: 1s all ease;
+      font-size: 1.3rem; }
+      .formulario .form .boton:hover {
+        border: gold solid 2px; }
+    .formulario .form .negro {
+      font-size: 1.5rem; }
     .formulario .form .input {
-      word-spacing: 2px;
-      letter-spacing: 1px;
-      color: white;
-      text-shadow: black 3px 3px 1px; }
+      font-size: 2rem; }
 
 .nTitle {
   grid-area: nTitle;
@@ -334,28 +671,54 @@ body {
         transform: scale(1.5, 1.5);
         filter: brightness(200%); }
 
+.bFooter {
+  background-color: #086aa7;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  height: 70px;
+  box-shadow: black 5px 3px 5px; }
+  .bFooter .contactFooter {
+    font-size: 1.5rem;
+    margin-top: 20px;
+    margin-left: 10px;
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px; }
+  .bFooter .flowRoyaleFooter {
+    display: inline-block;
+    width: 300px;
+    padding: 10px;
+    background-color: #870f18; }
+  .bFooter ul {
+    width: 50%;
+    display: flex;
+    justify-content: space-evenly; }
+    .bFooter ul li {
+      list-style-type: none; }
+      .bFooter ul li a img {
+        margin-top: 20px;
+        display: inline-block;
+        width: 50px; }
+
+@media screen and (max-width: 420px) {
+  .bFooter {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: center;
+    height: auto;
+    box-shadow: black 2px 1px 5px; }
+    .bFooter .flowRoyaleFooter {
+      width: 100%; }
+    .bFooter ul {
+      width: 100%; }
+    .bFooter .contactFooter {
+      font-size: 1.3rem; } }
+
 /*media queries de los body*/
 @media screen and (max-width: 420px) {
-  /*
-    .body{
-        background-image: url(../imagenes/cr.png);
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 340px 1100px 4fr 60px;
-        grid-template-areas: 
-        "navegador"
-        "mainContent"
-        "bus"
-        "footer"
-        ;
-    }*/
-  .body3 {
-    background-image: url(../imagenes/cr.png);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 340px 100px 2fr 60px;
-    grid-template-areas: "navegador" "rTitle" "formulario" "footer";
-    gap: 20px; }
   .body4 {
     background-image: url(../imagenes/cr.png);
     display: grid;
@@ -407,216 +770,145 @@ body {
         transition: all 1s ease;
         text-shadow: black 3px 3px 1px; } }
 
-/*media querie de home page*/
 @media screen and (max-width: 420px) {
+  .navegadorPrueba {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: #870f18;
+    height: 260px;
+    width: 100%; }
+    .navegadorPrueba .cajaLinks {
+      width: 100%;
+      height: 70%;
+      background-color: #086aa7;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-around;
+      align-items: center;
+      padding: 0;
+      margin-bottom: 0; }
+      .navegadorPrueba .cajaLinks .linkInterno {
+        text-decoration: none;
+        font-family: "Alfa Slab One", cursive;
+        font-size: large;
+        color: white;
+        word-spacing: 2px;
+        letter-spacing: 1px;
+        transition: all 1s ease;
+        text-shadow: black 3px 3px 1px; } }
+
+/*mediaquery de la home page*/
+@media screen and (max-width: 420px) {
+  .homeCarrusel {
+    width: 95%; }
+  .winCond {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    width: 90%;
+    margin-top: 50px;
+    height: auto; }
+    .winCond img {
+      margin-top: 10px; }
+    .winCond .contentWin {
+      width: 100%;
+      margin-left: 0; }
+      .winCond .contentWin .buscador .formBuscador {
+        width: 10rem; }
+      .winCond .contentWin .buscador .boton {
+        font-size: 1.2rem; }
+      .winCond .contentWin .pCardContent {
+        width: 90%;
+        margin: auto;
+        margin-bottom: 10px; }
   .mainContent {
     grid-area: mainContent;
     display: grid;
-    margin: 1%;
-    grid-template-rows: 170px 500px 370px;
+    grid-template-rows: 1fr 2fr 4fr;
     grid-template-columns: 1fr;
-    grid-template-areas: "contentTitle" "liMain" "caballeroImg"; }
+    grid-template-areas: "contentTitle" "caballeroImg" "liMain"; }
     .mainContent .caballeroImg {
       display: inline-block;
-      width: 300px;
-      position: relative;
-      left: 30px; }
-    .mainContent .contentTitle {
-      display: flex;
-      text-align: center;
-      align-items: center;
-      justify-content: center;
-      grid-area: contentTitle;
-      text-decoration: none;
-      font-family: "Alfa Slab One", cursive;
-      font-size: larger;
-      color: white;
-      text-shadow: black 3px 3px 1px; }
-    .mainContent .liMain {
-      grid-area: liMain;
-      font-size: larger;
-      word-spacing: 2px;
-      letter-spacing: 1px;
-      color: white;
-      text-shadow: black 3px 3px 1px;
-      font-family: "Yanone Kaffeesatz", sans-serif;
-      display: flex;
-      justify-content: space-around;
-      flex-direction: column;
-      text-align: center; }
-  .bus {
-    grid-area: bus;
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 50px 70px 300px 150px;
-    grid-template-areas: "buscadorTitle" "buscador" "magoElc" "pBuscador"; }
-    .bus .none {
-      grid-area: none; }
-    .bus .buscadorTitle {
-      grid-area: buscadorTitle;
-      font-family: "Alfa Slab One", cursive;
-      color: white;
-      word-spacing: 2px;
-      letter-spacing: 1px;
-      text-shadow: black 3px 3px 1px; }
-    .bus .magoElc {
-      width: 60%;
-      grid-area: magoElc;
-      display: inline-block;
-      margin: 0px auto; }
-    .bus .pBuscador {
-      text-align: center;
-      grid-area: pBuscador;
-      font-size: large;
-      word-spacing: 2px;
-      letter-spacing: 1px;
-      color: white;
-      text-shadow: black 3px 3px 1px;
-      font-family: "Yanone Kaffeesatz", sans-serif; }
-    .bus .buscador {
-      grid-area: buscador;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      gap: 20px;
-      margin: 10px; }
-      .bus .buscador .formBuscador {
-        width: 50%;
-        font-size: larger;
-        word-spacing: 2px;
-        letter-spacing: 1px;
-        color: white;
-        text-shadow: black 3px 3px 1px;
-        background: #870f18;
-        font-family: "Yanone Kaffeesatz", sans-serif; } }
+      margin: auto;
+      margin-left: 0; } }
 
-/*420px media querie de Mazos Page
-
-
-@media screen and (max-width: 420px){
-    .hTitle{
-        grid-area: hTitle;
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        font-family: $ff-title;
-        font-size: x-large;
-        color: map-get($paleta, blanco );
-        word-spacing: 2px;
-        letter-spacing: 1px;
-        text-shadow: map-get($paleta, negro )  3px 3px 1px;
-        .subTitle{
-            text-align: center;
-        }
-    }
-    .primeraSeccion{
-        grid-area: primeraSeccion;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 100px 200px 150px;
-        grid-template-areas: 
-        "nombreDelMazo"
-        "ejemplo"
-        "descripcionPrincipal"
-        ;
-        .ejemplo{
-            grid-area: ejemplo;
-            border: solid map-get($paleta, negro )  2px;
-            border-radius: 10px;
-            width: auto;
-            margin: auto;
-            margin-top: 0%;
-            margin-bottom: 0%;
-        }
-        .nombreDelMazo{
-            grid-area: nombreDelMazo;
-            font-family: 'Alfa Slab One', cursive;
-            font-size: x-large;
-            color: white;
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            text-align: center;
-            text-shadow: map-get($paleta, negro )  3px 3px 1px;
-        }
-        .descripcionPrincipal{
-            grid-area: descripcionPrincipal;
-            font-size: larger;
-            text-align: center;
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            color: white;
-            text-shadow: map-get($paleta, negro )  3px 3px 1px;
-            font-family: 'Yanone Kaffeesatz', sans-serif;
-            margin-top: 0%;
-        }
-    }
-    .segundaSeccion{
-        grid-area: segundaSeccion;
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 90px 2fr 1fr;
-        grid-template-areas: 
-        "tercerTitle"
-        "imagenMonta"
-        "descripcionMonta"
-        ;
-        .tercerTitle{
-            grid-area: tercerTitle;
-            align-self: center;
-            text-align: center;
-            font-family: $ff-title;
-            font-size: x-large;
-            color: map-get($paleta, blanco );
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
-        }
-        .imagenMonta{
-            grid-area: imagenMonta;
-            width: 300px;
-            display: inline-block;
-            margin-left: 10%;
-        }
-        .descripcionMonta{
-            grid-area: descripcionMonta;
-            text-align: center;
-            font-size: larger;
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            color: map-get($paleta, blanco );
-            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
-            font-family: $ff-text;
-        }
-    }
-}    
-*/
-/* 420px media querie Mazos Page */
+/*420px media querie de Mazos Page*/
 @media screen and (max-width: 420px) {
-  .subTitleR {
-    text-align: center;
-    font-size: x-large; }
+  .hTitle {
+    margin-top: 50px; }
+    .hTitle h1 {
+      font-size: 2.3rem; }
+  .seccionMazos {
+    margin-top: 50px; }
+    .seccionMazos .mazo .mainContent {
+      flex-direction: column;
+      width: 95%;
+      height: 40rem;
+      align-items: center;
+      justify-content: center;
+      gap: 30px; }
+      .seccionMazos .mazo .mainContent .content {
+        width: 95%; }
+        .seccionMazos .mazo .mainContent .content h3 {
+          font-size: 1.7rem;
+          text-align: center;
+          margin-top: 0; }
+        .seccionMazos .mazo .mainContent .content .pMazoContainer {
+          align-self: center; }
+      .seccionMazos .mazo .mainContent .containerMazo img {
+        width: 280px;
+        height: 200px;
+        margin-top: 0; }
+    .seccionMazos .winCond {
+      width: 95%;
+      flex-direction: column;
+      height: 40rem; }
+      .seccionMazos .winCond img {
+        width: 68%;
+        order: 2;
+        height: auto;
+        align-self: center; }
+      .seccionMazos .winCond .contentWin {
+        order: 1;
+        width: 90%; }
+        .seccionMazos .winCond .contentWin h3 {
+          font-size: 1.5rem; }
+        .seccionMazos .winCond .contentWin .pCardContent {
+          height: 13rem; }
+          .seccionMazos .winCond .contentWin .pCardContent h4 {
+            font-size: 1.5rem; } }
+
+/* 420px media querie Registro Page */
+@media screen and (max-width: 420px) {
+  .hTitle {
+    margin-top: 50px; }
+    .hTitle h1 {
+      font-size: 2.3rem; }
   .formulario {
     display: flex;
     flex-direction: column-reverse;
-    font-family: "Yanone Kaffeesatz", sans-serif; }
+    font-family: "Yanone Kaffeesatz", sans-serif;
+    margin-bottom: 30px; }
     .formulario .rImg {
       margin: auto; }
     .formulario .form {
       padding: 4%;
-      font-size: 40px;
-      text-shadow: black 10px 5px 5px; }
+      margin: auto;
+      display: flex;
+      flex-direction: column;
+      align-self: center;
+      gap: 35px; }
       .formulario .form .boton {
         display: inline-block;
-        position: relative;
-        left: 120px; }
+        width: 10rem;
+        align-self: center; }
     .formulario .input {
-      word-spacing: 2px;
-      letter-spacing: 1px;
+      font-family: "Yanone Kaffeesatz", sans-serif;
       color: white;
-      text-shadow: black 3px 3px 1px; } }
+      text-shadow: black 3px 3px 1px;
+      margin: auto; } }
 
 /* contenido de Nosotros */
 @media screen and (max-width: 420px) {
@@ -672,538 +964,3 @@ body {
   .duendeImg {
     display: inline-block;
     margin: 0px; } }
-
-.homeCarrusel {
-  width: 90%;
-  margin: auto;
-  margin-top: 50px;
-  padding: 2%;
-  background: #870f18;
-  background: linear-gradient(203deg, #870f18 0%, #700b1b 58%, #540a0f 100%);
-  border: outset #645858 4px; }
-  .homeCarrusel .carousel-inner .foto {
-    border: #645858 inset; }
-
-.mainContent {
-  grid-area: mainContent;
-  display: grid;
-  grid-template-rows: 1fr 2fr;
-  grid-template-columns: 1fr 2fr;
-  grid-template-areas: "caballeroImg contentTitle" "caballeroImg liMain";
-  color: white;
-  margin-top: 50px; }
-  .mainContent .caballeroImg {
-    grid-area: caballeroImg;
-    display: inline-block;
-    margin: auto; }
-  .mainContent .contentTitle {
-    display: flex;
-    align-items: center;
-    grid-area: contentTitle;
-    text-decoration: none;
-    font-family: "Alfa Slab One", cursive;
-    color: white;
-    text-shadow: black 3px 3px 1px;
-    letter-spacing: 2px;
-    font-family: "Alfa Slab One", cursive;
-    font-size: 2.5rem; }
-  .mainContent .liMain {
-    grid-area: liMain;
-    font-size: 1.5rem;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    text-shadow: black 3px 3px 1px;
-    font-family: "Yanone Kaffeesatz", sans-serif;
-    display: flex;
-    justify-content: space-around;
-    flex-direction: column; }
-    .mainContent .liMain .lista1 {
-      animation-name: lista1;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s; }
-
-@keyframes lista1 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 1.6rem; }
-  90% {
-    color: white; } }
-    .mainContent .liMain .lista2 {
-      animation-name: lista2;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s;
-      animation-delay: 8s; }
-
-@keyframes lista2 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 1.6rem; }
-  90% {
-    color: white; } }
-    .mainContent .liMain .lista3 {
-      animation-name: lista3;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s;
-      animation-delay: 12s; }
-
-@keyframes lista3 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 1.6rem; }
-  90% {
-    color: white; } }
-    .mainContent .liMain .lista4 {
-      animation-name: lista4;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s;
-      animation-delay: 16s; }
-
-@keyframes lista4 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 1.6rem; }
-  90% {
-    color: white; } }
-    .mainContent .liMain .lista5 {
-      animation-name: lista5;
-      animation-iteration-count: initial;
-      animation-timing-function: ease-in;
-      animation-duration: 3s;
-      animation-delay: 20s; }
-
-@keyframes lista5 {
-  0% {
-    color: gold; }
-  25% {
-    font-size: 1.6rem; }
-  90% {
-    color: white; } }
-
-.buscadorTitle {
-  margin-top: 50px; }
-  .buscadorTitle h3 {
-    font-family: "Alfa Slab One", cursive;
-    color: white;
-    text-shadow: black 3px 3px 1px;
-    letter-spacing: 2px;
-    text-align: center;
-    font-size: 1.8rem; }
-
-.winCond {
-  width: 60%;
-  margin: auto;
-  margin-top: 40px;
-  margin-bottom: 50px;
-  height: 300px;
-  display: flex;
-  border: outset #645858 4px;
-  background-color: #870f18; }
-  .winCond img {
-    display: inline-block;
-    width: 200px;
-    height: 250px;
-    margin-top: 30px;
-    margin-left: 10px; }
-  .winCond .contentWin {
-    margin-top: 30px;
-    margin-left: 20px;
-    width: 60%; }
-    .winCond .contentWin .buscador {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      gap: 30px;
-      margin-bottom: 20px; }
-      .winCond .contentWin .buscador .formBuscador {
-        font-family: "Yanone Kaffeesatz", sans-serif;
-        color: black;
-        background-color: white;
-        width: 17rem;
-        font-size: 1.7rem;
-        background: white;
-        border: inset #645858 4px; }
-      .winCond .contentWin .buscador .boton {
-        font-family: "Alfa Slab One", cursive;
-        font-size: 1.2rem;
-        border-radius: 10px;
-        border: black solid 2px;
-        padding: 2px;
-        background: #f56ec0;
-        background: linear-gradient(217deg, #f56ec0 0%, #85e6a3 51%, #7aee73 100%);
-        transition: all 1s; }
-        .winCond .contentWin .buscador .boton:hover {
-          border: solid gold 2px; }
-    .winCond .contentWin .pCardContent {
-      font-family: "Yanone Kaffeesatz", sans-serif;
-      color: black;
-      background-color: white;
-      font-size: 1.5rem;
-      height: 160px;
-      padding: 15px;
-      border: #645858 inset;
-      flex-wrap: nowrap;
-      overflow: auto;
-      line-height: 1; }
-      .winCond .contentWin .pCardContent h4 {
-        font-weight: bold; }
-      .winCond .contentWin .pCardContent div {
-        display: flex;
-        justify-content: center;
-        gap: 20px;
-        margin-top: 10px; }
-        .winCond .contentWin .pCardContent div .normal {
-          background-color: #ffb923;
-          font-family: "Alfa Slab One", cursive;
-          font-size: 1.2rem;
-          border-radius: 10px;
-          border: black solid 2px;
-          padding: 2px; }
-        .winCond .contentWin .pCardContent div .arena {
-          background-color: #2977a8;
-          font-family: "Alfa Slab One", cursive;
-          font-size: 1.2rem;
-          border-radius: 10px;
-          border: black solid 2px;
-          padding: 2px; }
-
-@media screen and (max-width: 420px) {
-  .homeCarrusel {
-    width: 95%; }
-  .winCond {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    width: 90%;
-    margin-top: 50px;
-    height: auto; }
-    .winCond img {
-      margin-top: 10px; }
-    .winCond .contentWin {
-      width: 100%;
-      margin-left: 0; }
-      .winCond .contentWin .buscador .formBuscador {
-        width: 10rem; }
-      .winCond .contentWin .buscador .boton {
-        font-size: 1.2rem; }
-      .winCond .contentWin .pCardContent {
-        width: 90%;
-        margin: auto;
-        margin-bottom: 10px; }
-  .mainContent {
-    grid-area: mainContent;
-    display: grid;
-    grid-template-rows: 1fr 2fr 4fr;
-    grid-template-columns: 1fr;
-    grid-template-areas: "contentTitle" "caballeroImg" "liMain"; }
-    .mainContent .caballeroImg {
-      display: inline-block;
-      margin: auto;
-      margin-left: 0; } }
-
-.navegadorPrueba {
-  width: 100%;
-  height: 70px;
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  background-color: #086aa7;
-  box-shadow: black 2px 2px 5px; }
-  .navegadorPrueba .logoImg {
-    background-color: #870f18; }
-  .navegadorPrueba .cajaLinks {
-    width: 75%;
-    display: flex;
-    flex-direction: row;
-    align-self: center;
-    justify-content: space-around;
-    align-items: center;
-    margin-bottom: 0; }
-    .navegadorPrueba .cajaLinks .li {
-      list-style-type: none; }
-      .navegadorPrueba .cajaLinks .li .linkInterno {
-        text-decoration: none;
-        font-family: 'Alfa Slab One', cursive;
-        font-size: medium;
-        color: white;
-        word-spacing: 2px;
-        letter-spacing: 1px;
-        transition: all 1s ease;
-        text-shadow: black 3px 3px 1px; }
-        .navegadorPrueba .cajaLinks .li .linkInterno:hover {
-          font-size: large;
-          color: gold;
-          text-shadow: black 4px 4px 2px; }
-
-@media screen and (max-width: 420px) {
-  .navegadorPrueba {
-    position: relative;
-    display: flex;
-    flex-direction: column;
-    background-color: #870f18;
-    height: 260px;
-    width: 100%; }
-    .navegadorPrueba .cajaLinks {
-      width: 100%;
-      height: 70%;
-      background-color: #086aa7;
-      display: flex;
-      flex-direction: column;
-      justify-content: space-around;
-      align-items: center;
-      padding: 0;
-      margin-bottom: 0; }
-      .navegadorPrueba .cajaLinks .linkInterno {
-        text-decoration: none;
-        font-family: "Alfa Slab One", cursive;
-        font-size: large;
-        color: white;
-        word-spacing: 2px;
-        letter-spacing: 1px;
-        transition: all 1s ease;
-        text-shadow: black 3px 3px 1px; } }
-
-.hTitle {
-  margin-top: 70px; }
-  .hTitle h1 {
-    font-family: "Alfa Slab One", cursive;
-    color: white;
-    text-shadow: black 3px 3px 1px;
-    letter-spacing: 2px;
-    font-size: 3rem;
-    text-align: center; }
-
-/*Scss de la seccion de mazos y win condition*/
-.seccionMazos {
-  margin-top: 80px;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  gap: 50px;
-  margin-bottom: 50px;
-  /*caja de mazos*/
-  /*caja del win condition*/ }
-  .seccionMazos .mazo {
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center; }
-    .seccionMazos .mazo .mainContent {
-      width: 70%;
-      height: 23rem;
-      display: flex;
-      justify-content: space-around;
-      border: outset #645858 4px;
-      background-color: #870f18; }
-      .seccionMazos .mazo .mainContent .content {
-        width: 50%;
-        display: flex;
-        flex-direction: column; }
-        .seccionMazos .mazo .mainContent .content h3 {
-          margin-top: 20px;
-          font-size: 2rem;
-          font-family: "Alfa Slab One", cursive;
-          color: white;
-          text-shadow: black 3px 3px 1px;
-          letter-spacing: 2px; }
-        .seccionMazos .mazo .mainContent .content .pMazoContainer {
-          display: flex;
-          flex-direction: column;
-          gap: 10px;
-          font-size: 1.5rem;
-          margin-top: 20px;
-          flex-wrap: nowrap;
-          overflow: auto;
-          height: 14rem;
-          padding: 15px;
-          border: #645858 inset;
-          line-height: 1;
-          font-family: "Yanone Kaffeesatz", sans-serif;
-          color: black;
-          background-color: white; }
-          .seccionMazos .mazo .mainContent .content .pMazoContainer ul {
-            margin-left: 5px; }
-            .seccionMazos .mazo .mainContent .content .pMazoContainer ul li {
-              font-weight: bold; }
-      .seccionMazos .mazo .mainContent .containerMazo {
-        display: flex;
-        flex-direction: column; }
-        .seccionMazos .mazo .mainContent .containerMazo img {
-          display: inline-block;
-          width: 350px;
-          height: 250px;
-          margin-top: 50px;
-          border-style: inset;
-          border: #645858 inset;
-          border-radius: 10px; }
-        .seccionMazos .mazo .mainContent .containerMazo .bGuardar {
-          background: #7aee9b;
-          background: linear-gradient(203deg, #7aee9b 0%, #85e6a3 48%, #f97ec9 100%);
-          padding: 3px 3px 1px 3px;
-          font-family: "Alfa Slab One", cursive;
-          width: 7rem;
-          align-self: flex-end;
-          margin-top: 10px;
-          margin-right: 20px;
-          font-family: "Alfa Slab One", cursive;
-          font-size: 1.2rem;
-          border-radius: 10px;
-          border: black solid 2px;
-          padding: 2px; }
-  .seccionMazos .winCond {
-    width: 60%;
-    height: 300px;
-    display: flex;
-    border: outset #645858 4px;
-    background-color: #870f18; }
-    .seccionMazos .winCond img {
-      display: inline-block;
-      width: 200px;
-      height: 250px;
-      margin-top: 30px;
-      margin-left: 10px; }
-    .seccionMazos .winCond .contentWin {
-      margin-top: 30px;
-      margin-left: 20px;
-      width: 60%; }
-      .seccionMazos .winCond .contentWin h3 {
-        font-family: "Alfa Slab One", cursive;
-        color: white;
-        text-shadow: black 3px 3px 1px;
-        letter-spacing: 2px;
-        font-size: 2rem;
-        margin-bottom: 10px;
-        letter-spacing: 1px; }
-      .seccionMazos .winCond .contentWin .pCardContent {
-        font-family: "Yanone Kaffeesatz", sans-serif;
-        color: black;
-        background-color: white;
-        font-size: 1.5rem;
-        height: 160px;
-        padding: 15px;
-        border: #645858 inset;
-        flex-wrap: nowrap;
-        overflow: auto;
-        line-height: 1; }
-        .seccionMazos .winCond .contentWin .pCardContent h4 {
-          font-weight: bold; }
-        .seccionMazos .winCond .contentWin .pCardContent div {
-          display: flex;
-          justify-content: center;
-          gap: 20px;
-          margin-top: 10px; }
-          .seccionMazos .winCond .contentWin .pCardContent div .legendaria {
-            background: #7aee9b;
-            background: linear-gradient(203deg, #7aee9b 0%, #85e6a3 48%, #f97ec9 100%);
-            font-family: "Alfa Slab One", cursive;
-            font-size: 1.2rem;
-            border-radius: 10px;
-            border: black solid 2px;
-            padding: 2px; }
-          .seccionMazos .winCond .contentWin .pCardContent div .arena {
-            background-color: #2977a8;
-            font-family: "Alfa Slab One", cursive;
-            font-size: 1.2rem;
-            border-radius: 10px;
-            border: black solid 2px;
-            padding: 2px; }
-
-@media screen and (max-width: 420px) {
-  .hTitle {
-    margin-top: 50px; }
-    .hTitle h1 {
-      font-size: 2.3rem; }
-  .seccionMazos {
-    margin-top: 50px; }
-    .seccionMazos .mazo .mainContent {
-      flex-direction: column;
-      width: 95%;
-      height: 40rem;
-      align-items: center;
-      justify-content: center;
-      gap: 30px; }
-      .seccionMazos .mazo .mainContent .content {
-        width: 95%; }
-        .seccionMazos .mazo .mainContent .content h3 {
-          font-size: 1.7rem;
-          text-align: center;
-          margin-top: 0; }
-        .seccionMazos .mazo .mainContent .content .pMazoContainer {
-          align-self: center; }
-      .seccionMazos .mazo .mainContent .containerMazo img {
-        width: 280px;
-        height: 200px;
-        margin-top: 0; }
-    .seccionMazos .winCond {
-      width: 95%;
-      flex-direction: column;
-      height: 40rem; }
-      .seccionMazos .winCond img {
-        width: 68%;
-        order: 2;
-        height: auto;
-        align-self: center; }
-      .seccionMazos .winCond .contentWin {
-        order: 1;
-        width: 90%; }
-        .seccionMazos .winCond .contentWin h3 {
-          font-size: 1.5rem; }
-        .seccionMazos .winCond .contentWin .pCardContent {
-          height: 13rem; }
-          .seccionMazos .winCond .contentWin .pCardContent h4 {
-            font-size: 1.5rem; } }
-
-.bFooter {
-  background-color: #086aa7;
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  height: 70px;
-  box-shadow: black 5px 3px 5px; }
-  .bFooter .contactFooter {
-    font-size: 1.5rem;
-    margin-top: 20px;
-    margin-left: 10px;
-    font-family: "Alfa Slab One", cursive;
-    color: white;
-    text-shadow: black 3px 3px 1px;
-    letter-spacing: 2px; }
-  .bFooter .flowRoyaleFooter {
-    display: inline-block;
-    width: 300px;
-    padding: 10px;
-    background-color: #870f18; }
-  .bFooter ul {
-    width: 50%;
-    display: flex;
-    justify-content: space-evenly; }
-    .bFooter ul li {
-      list-style-type: none; }
-      .bFooter ul li a img {
-        margin-top: 20px;
-        display: inline-block;
-        width: 50px; }
-
-@media screen and (max-width: 420px) {
-  .bFooter {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-    align-items: center;
-    height: auto;
-    box-shadow: black 2px 1px 5px; }
-    .bFooter .flowRoyaleFooter {
-      width: 100%; }
-    .bFooter ul {
-      width: 100%; }
-    .bFooter .contactFooter {
-      font-size: 1.3rem; } }

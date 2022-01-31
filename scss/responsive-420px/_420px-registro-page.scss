@@ -1,35 +1,37 @@
-
-/* 420px media querie Mazos Page */
+/* 420px media querie Registro Page */
 
 
 @media screen and (max-width: 420px){
-
-    .subTitleR{
-        text-align: center;
-        font-size: x-large;
+    .hTitle{
+        margin-top: 50px;
+        h1{
+            font-size: 2.3rem;
+        }
     }
     .formulario{
         display: flex;
         flex-direction: column-reverse;
         font-family: $ff-text;
+        margin-bottom: 30px;
         .rImg{
         margin: auto;
         }
         .form{
         padding: 4%;
-        font-size: 40px;
-        text-shadow:map-get($paleta, negro )  10px 5px 5px;
+        margin: auto;
+        display: flex;
+        flex-direction: column;
+        align-self: center;
+        gap: 35px;
         .boton{
             display: inline-block;
-            position: relative;
-            left:120px;
+            width: 10rem;
+            align-self: center;
             }
         }
         .input{
-        word-spacing: 2px;
-        letter-spacing: 1px;
-        color: map-get($paleta, blanco );
-        text-shadow: map-get($paleta, negro ) 3px 3px 1px;
+        @include text-style-white;
+        margin: auto;
         }
     }
 }
