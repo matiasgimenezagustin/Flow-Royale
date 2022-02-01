@@ -13,16 +13,15 @@
     <link rel="stylesheet" href="../css/estilo.css">
 
     <!--Favicon-->
+
     <link rel="icon" href="../favicon.ico">
     
     <!--Title de la pagina-->
-    <title>Flow Royale</title>
+    <title>Flow Royale Donaciones Page</title>
 </head>
 <body class="body5">
-    <nav class="navegador">
-        <h1 class="mainTitle">
-            Flow Royale
-        </h1>
+    <nav class="navegadorPrueba">
+        <img src="../imagenes/flow-royale-logo.png" alt="logo de Flow Royale" class="logoImg">
         <ul class="cajaLinks">
             <li class="li">
                 <a href="../index.html" class="linkInterno">Menú</a>
@@ -41,10 +40,11 @@
             </li>
         </ul>
     </nav>
-    <header class="dHeader">
-        <h2 class="dTitle">
-            Contribuye Económicamente a que Nuestro Proyecto Gratuito siga en Funcionamiento
-        </h2>
+    <!--Header en SCSS de Mazos Page-->
+    <header class="hTitle">
+        <h1>
+            Mazos Populares
+        </h1>
     </header>
     <!--Caja para cuando sepa, programar como medio de Pago-->
     <div class="cajaPaypal">
@@ -57,26 +57,18 @@
             <input type="submit" class="boton">
         </form>
     </div>
-    <img src="../imagenes/duende.png" width="400px" class="duendeImg" alt="Duende Clash Royale">
-    <h2 class="dSaludos">¡Gracias por Su Aporte!</h2>
-    <footer class="footer">
-        <ul class="ulFooter">
-            <li class="footerLi">
-                <a class="insta" href="http://www.instagram.com">
-                    <img class="iconA" src="../imagenes/instagram.png" alt="Instagram Icono" width="35px">
-                </a>
-            </li>
-            <li class="footerLi">
-                <a href="#">
-                    <img class="iconA" src="../imagenes/whatsapp.png" alt="Whatsapp Icono" width="35px">
-                </a>
-            </li>
-            <li class="footerLi">
-                <a href="#">
-                    <img class="iconA" src="../imagenes/gmail.png" alt="Gmail Icono" width="40px">
-                </a>
-            </li>
+    <div class="saludos">
+        <img src="../imagenes/duende.png"  class="duendeImg" alt="Duende Clash Royale">
+        <h2 class="dSaludos">¡Gracias por Su Aporte!</h2>
+    </div>
+    <!--Footer en SCSS-->
+    <footer class="bFooter">
+        <h3 class="contactFooter">Puedes Contactarme En:</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/matute_gimenez_agustin/"><img src="../imagenes/instagram.png" alt=""></a></li>
+            <li><a href="https://github.com/matiasgimenezagustin"><img src="../imagenes/github.png" alt=""></a></li>
         </ul>
+        <img class="flowRoyaleFooter" src="../imagenes/flow-royale-logo.png" alt="Logo de Flow Royale">
     </footer>
 </body>
 </html>

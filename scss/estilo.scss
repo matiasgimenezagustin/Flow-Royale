@@ -26,6 +26,9 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
     border-radius: 10px;
     border: map-get($paleta, negro ) solid 2px;
     padding: 2px;
+    &:hover{
+        border: solid map-get($paleta, dorado ) 2px;
+    }
 }
 @mixin cajas-info{
     border: outset map-get($paleta, gris ) 4px;
@@ -90,7 +93,6 @@ $ff-text:'Yanone Kaffeesatz', sans-serif;
 @import "responsive-420px/420px-registro-page";
 @import "responsive-420px/420px-nosotros-page";
 @import "responsive-420px/420px-donaciones-page";
-
 
 
 

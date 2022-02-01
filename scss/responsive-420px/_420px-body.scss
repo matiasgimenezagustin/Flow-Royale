@@ -18,18 +18,4 @@
         "footer"
         ;
     }
-    .body5{
-        background-image: url(../imagenes/cr.png);
-        display: grid;
-        grid-template-columns: 1fr;
-        grid-template-rows: 340px 300px 1fr 1fr 60px;
-        grid-template-areas: 
-        "navegador"
-        "dHeader"
-        "cajaPaypal"
-        "duendeImg"
-        "dSaludos"
-        "footer"
-        ;
-    }
 }

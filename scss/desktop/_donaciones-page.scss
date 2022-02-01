@@ -1,29 +1,13 @@
-/* Donaciones css */
 
-.dHeader{
-    grid-area: dHeader;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-family: $ff-title;
-    font-size: x-large;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    color: map-get($paleta, blanco );
-    text-shadow: map-get($paleta, negro ) 3px 3px 1px;
-    margin: 0px 10% 0px 10%;
-    .dTitle{
-        text-align: center;
-    }
-}
+/* Donaciones Scss */
+
 
 .cajaPaypal{
-    grid-area: cajaPaypal;
-    width: 600px;
-    margin-left: 28%;
-    height: 280px;
-    background-color: map-get($paleta, rojo );
-    border: map-get($paleta, negro ) 2px solid;
+    width: 40rem;
+    height: 20rem;
+    @include caja-gradiante;
+    margin: auto;
+    margin-top: 50px;
     .dPaypal{
         display: flex;
         align-items: center;
@@ -32,54 +16,34 @@
         gap: 20px;
         font-family: $ff-text;
         .boton{
-            width: 6rem;
-            font-size: larger;
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            color: map-get($paleta, blanco );
-            text-shadow: map-get($paleta, negro ) 3px 3px 1px;
-            background: map-get($paleta, azul );
-            font-family: $ff-text;
-            transition: ease 1s all;
-            &:hover{
-                background-color: map-get($paleta, azul-claro );
-                color: map-get($paleta, dorado );
-            }
+            @include gradiant-legendary;
+            @include button;
         }
         .paypal{
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            color: map-get($paleta, blanco );
-            font-size: 40px;
-            text-shadow:  map-get($paleta, negro ) 10px 5px 5px;
+            @include title-style;
+            font-size: 1.7rem;
+            margin-top: 20px;
         }
         .paypal1{
-            font-family: $ff-text;
-            font-size: larger;
+            @include text-style;
+            font-size: 1.4rem;
         }
         .importe{
-            word-spacing: 2px;
-            letter-spacing: 1px;
-            color: map-get($paleta, blanco );
-            font-size: 30px;
-            text-shadow: map-get($paleta, negro )  10px 5px 5px;
+            @include title-style;
+            font-size: 1.5rem;
         }
     }
 }
-.duendeImg{
-    grid-area: duendeImg;
-    margin: auto;
-}
-.dSaludos{
-    grid-area: dSaludos;
-    font-family: $ff-title;
-    font-size: x-large;
-    color: map-get($paleta, blanco );
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    text-shadow: map-get($paleta, negro )  3px 3px 1px;
+.saludos{
+    @include flex-column-center;
+    flex-direction: column-reverse;
+    margin-top: 40px;
+    .duendeImg{
+        margin: auto;
+        width: 20rem;
+    }
+    .dSaludos{
+        @include title-style;
+        text-align: center;
+    }
 }

@@ -19,14 +19,6 @@ body {
   grid-template-areas: "navegador" "nTitle" "nLista" "footer";
   gap: 30px; }
 
-/*body de la page Donaciones*/
-.body5 {
-  background-image: url(../imagenes/cr.png);
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70px 1fr 1fr 200px 1fr;
-  grid-template-areas: "navegador" "dHeader" "cajaPaypal" "duendeImg" "dSaludos" "footer"; }
-
 .navegador {
   grid-area: navegador;
   width: 100%;
@@ -285,6 +277,8 @@ body {
         transition: all 1s; }
         .winCond .contentWin .buscador .boton:hover {
           border: solid gold 2px; }
+        .winCond .contentWin .buscador .boton:hover {
+          border: solid gold 2px; }
     .winCond .contentWin .pCardContent {
       font-family: "Yanone Kaffeesatz", sans-serif;
       color: black;
@@ -310,6 +304,8 @@ body {
           border-radius: 10px;
           border: black solid 2px;
           padding: 2px; }
+          .winCond .contentWin .pCardContent div .normal:hover {
+            border: solid gold 2px; }
         .winCond .contentWin .pCardContent div .arena {
           background-color: #2977a8;
           font-family: "Alfa Slab One", cursive;
@@ -317,6 +313,8 @@ body {
           border-radius: 10px;
           border: black solid 2px;
           padding: 2px; }
+          .winCond .contentWin .pCardContent div .arena:hover {
+            border: solid gold 2px; }
 
 /*Scss de la seccion de mazos y win condition*/
 .seccionMazos {
@@ -396,6 +394,8 @@ body {
           border-radius: 10px;
           border: black solid 2px;
           padding: 2px; }
+          .seccionMazos .mazo .mainContent .containerMazo .bGuardar:hover {
+            border: solid gold 2px; }
   .seccionMazos .winCond {
     width: 60%;
     height: 300px;
@@ -446,6 +446,8 @@ body {
             border-radius: 10px;
             border: black solid 2px;
             padding: 2px; }
+            .seccionMazos .winCond .contentWin .pCardContent div .legendaria:hover {
+              border: solid gold 2px; }
           .seccionMazos .winCond .contentWin .pCardContent div .arena {
             background-color: #2977a8;
             font-family: "Alfa Slab One", cursive;
@@ -453,6 +455,8 @@ body {
             border-radius: 10px;
             border: black solid 2px;
             padding: 2px; }
+            .seccionMazos .winCond .contentWin .pCardContent div .arena:hover {
+              border: solid gold 2px; }
 
 /* Registro page*/
 .formulario {
@@ -476,6 +480,8 @@ body {
       background: linear-gradient(217deg, #85e6a3 0%, #ff89d1 51%, #7aee73 100%);
       transition: 1s all ease;
       font-size: 1.3rem; }
+      .formulario .form .boton:hover {
+        border: solid gold 2px; }
       .formulario .form .boton:hover {
         border: gold solid 2px; }
     .formulario .form .negro {
@@ -581,29 +587,15 @@ body {
     text-align: center;
     text-shadow: black 3px 3px 1px; }
 
-/* Donaciones css */
-.dHeader {
-  grid-area: dHeader;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-family: "Alfa Slab One", cursive;
-  font-size: x-large;
-  word-spacing: 2px;
-  letter-spacing: 1px;
-  color: white;
-  text-shadow: black 3px 3px 1px;
-  margin: 0px 10% 0px 10%; }
-  .dHeader .dTitle {
-    text-align: center; }
-
+/* Donaciones Scss */
 .cajaPaypal {
-  grid-area: cajaPaypal;
-  width: 600px;
-  margin-left: 28%;
-  height: 280px;
-  background-color: #870f18;
-  border: black 2px solid; }
+  width: 40rem;
+  height: 20rem;
+  background: #870f18;
+  background: linear-gradient(203deg, #870f18 0%, #700b1b 58%, #540a0f 100%);
+  border: outset #645858 4px;
+  margin: auto;
+  margin-top: 50px; }
   .cajaPaypal .dPaypal {
     display: flex;
     align-items: center;
@@ -612,50 +604,50 @@ body {
     gap: 20px;
     font-family: "Yanone Kaffeesatz", sans-serif; }
     .cajaPaypal .dPaypal .boton {
-      width: 6rem;
-      font-size: larger;
-      word-spacing: 2px;
-      letter-spacing: 1px;
+      background: #7aee9b;
+      background: linear-gradient(203deg, #7aee9b 0%, #85e6a3 48%, #f97ec9 100%);
+      font-family: "Alfa Slab One", cursive;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      border: black solid 2px;
+      padding: 2px; }
+      .cajaPaypal .dPaypal .boton:hover {
+        border: solid gold 2px; }
+    .cajaPaypal .dPaypal .paypal {
+      font-family: "Alfa Slab One", cursive;
       color: white;
       text-shadow: black 3px 3px 1px;
-      background: #086aa7;
-      font-family: "Yanone Kaffeesatz", sans-serif;
-      transition: ease 1s all; }
-      .cajaPaypal .dPaypal .boton:hover {
-        background-color: #2977a8;
-        color: gold; }
-    .cajaPaypal .dPaypal .paypal {
-      word-spacing: 2px;
-      letter-spacing: 1px;
-      color: white;
-      font-size: 40px;
-      text-shadow: black 10px 5px 5px; }
+      letter-spacing: 2px;
+      font-size: 1.7rem;
+      margin-top: 20px; }
     .cajaPaypal .dPaypal .paypal1 {
       font-family: "Yanone Kaffeesatz", sans-serif;
-      font-size: larger; }
+      color: black;
+      background-color: white;
+      font-size: 1.4rem; }
     .cajaPaypal .dPaypal .importe {
-      word-spacing: 2px;
-      letter-spacing: 1px;
+      font-family: "Alfa Slab One", cursive;
       color: white;
-      font-size: 30px;
-      text-shadow: black 10px 5px 5px; }
+      text-shadow: black 3px 3px 1px;
+      letter-spacing: 2px;
+      font-size: 1.5rem; }
 
-.duendeImg {
-  grid-area: duendeImg;
-  margin: auto; }
-
-.dSaludos {
-  grid-area: dSaludos;
-  font-family: "Alfa Slab One", cursive;
-  font-size: x-large;
-  color: white;
-  word-spacing: 2px;
-  letter-spacing: 1px;
+.saludos {
   display: flex;
+  flex-direction: column;
   justify-content: center;
   align-items: center;
-  text-align: center;
-  text-shadow: black 3px 3px 1px; }
+  flex-direction: column-reverse;
+  margin-top: 40px; }
+  .saludos .duendeImg {
+    margin: auto;
+    width: 20rem; }
+  .saludos .dSaludos {
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    text-align: center; }
 
 .footer {
   grid-area: footer; }
@@ -724,13 +716,7 @@ body {
     display: grid;
     grid-template-columns: 1fr;
     grid-template-rows: 340px 100px 3fr 60px;
-    grid-template-areas: "navegador" "nTitle" "nLista" "footer"; }
-  .body5 {
-    background-image: url(../imagenes/cr.png);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 340px 300px 1fr 1fr 60px;
-    grid-template-areas: "navegador" "dHeader" "cajaPaypal" "duendeImg" "dSaludos" "footer"; } }
+    grid-template-areas: "navegador" "nTitle" "nLista" "footer"; } }
 
 /*Navbar 420px SCSS*/
 @media screen and (max-width: 420px) {
@@ -937,30 +923,16 @@ body {
       justify-content: space-around;
       flex-direction: column; } }
 
+/*MediaQuerie 420px Donaciones Page*/
 @media screen and (max-width: 420px) {
+  .hTitle {
+    margin-top: 50px; }
+    .hTitle h1 {
+      font-size: 2.3rem; }
   .cajaPaypal {
-    width: 380px;
+    width: 95%;
     margin: 2%;
-    height: 280px;
-    background-color: #870f18;
-    border: black 2px solid; }
+    height: 22rem; }
     .cajaPaypal .dPaypal .paypal {
-      margin-top: 10px; }
-    .cajaPaypal .dPaypal .importe {
-      font-size: x-large; }
-    .cajaPaypal .dPaypal .boton {
-      width: 6rem;
-      font-size: larger;
-      word-spacing: 2px;
-      letter-spacing: 1px;
-      color: white;
-      text-shadow: black 3px 3px 1px;
-      background: #086aa7;
-      font-family: "Yanone Kaffeesatz", sans-serif;
-      transition: ease 1s all; }
-      .cajaPaypal .dPaypal .boton:hover {
-        background-color: #2977a8;
-        color: gold; }
-  .duendeImg {
-    display: inline-block;
-    margin: 0px; } }
+      margin-top: 10px;
+      text-align: center; } }
