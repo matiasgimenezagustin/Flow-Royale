@@ -10,19 +10,22 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Alfa+Slab+One&display=swap" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Yanone+Kaffeesatz&display=swap" rel="stylesheet">
+    <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="../css/estilo.css">
 
     <!--Favicon-->
     <link rel="icon" href="../favicon.ico">
     <!--Title de la pagina-->
-    <title>Flow Royale</title>
+    <title>Flow Royale Nosotros Page</title>
 </head>
 <body class="body4">
-    <nav class="navegador">
-        <h1 class="mainTitle">
-            Flow Royale
-        </h1>
+    <!--Navegador en SCSS-->
+    <nav class="navegadorPrueba">
+        <img src="../imagenes/flow-royale-logo.png" alt="logo de Flow Royale" class="logoImg">
         <ul class="cajaLinks">
+            <!--Links del nav-->
             <li class="li">
                 <a href="../index.html" class="linkInterno">Menú</a>
             </li>
@@ -40,10 +43,11 @@
             </li>
         </ul>
     </nav>
-    <header class="nTitle">
-        <h2 class="nMain">
-            ¿Quién esta detrás de Flow Royale?
-        </h2>
+    <!--Header en SCSS de Nosotros Page-->
+    <header class="hTitle">
+        <h1 class="animate__animated animate__backInLeft">
+            ¿Quien esta detras de Flow Royale?
+        </h1>
     </header>
     <div class="nLista">
         <img class="nImg" src="../imagenes/n.png" alt="Imagen de Clash Royale">
@@ -57,24 +61,14 @@
         </ul>
         <h3 class="nSaludos">Saludos al lector desde Flow Royale</h3>
     </div>
-    <footer class="footer">
-        <ul class="ulFooter">
-            <li class="footerLi">
-                <a class="insta" href="http://www.instagram.com">
-                    <img class="iconA" src="../imagenes/instagram.png" alt="Instagram Icono" width="35px">
-                </a>
-            </li>
-            <li class="footerLi">
-                <a href="#">
-                    <img class="iconA" src="../imagenes/whatsapp.png" alt="Whatsapp Icono" width="35px">
-                </a>
-            </li>
-            <li class="footerLi">
-                <a href="#">
-                    <img class="iconA" src="../imagenes/gmail.png" alt="Gmail Icono" width="40px">
-                </a>
-            </li>
+        <!--Footer en SCSS-->
+    <footer class="bFooter">
+        <h3 class="contactFooter">Puedes Contactarme En:</h3>
+        <ul>
+            <li><a href="https://www.instagram.com/matute_gimenez_agustin/"><img src="../imagenes/instagram.png" alt=""></a></li>
+            <li><a href="https://github.com/matiasgimenezagustin"><img src="../imagenes/github.png" alt=""></a></li>
         </ul>
+        <img class="flowRoyaleFooter" src="../imagenes/flow-royale-logo.png" alt="Logo de Flow Royale">
     </footer>
 </body>
 </html>

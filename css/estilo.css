@@ -11,14 +11,6 @@
 body {
   background-image: url(../imagenes/cr.png); }
 
-/*body de la pagina Nosotros*/
-.body4 {
-  display: grid;
-  grid-template-columns: 1fr;
-  grid-template-rows: 70px 1fr 3fr 70px;
-  grid-template-areas: "navegador" "nTitle" "nLista" "footer";
-  gap: 30px; }
-
 .navegador {
   grid-area: navegador;
   width: 100%;
@@ -489,21 +481,6 @@ body {
     .formulario .form .input {
       font-size: 2rem; }
 
-.nTitle {
-  grid-area: nTitle;
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-  font-family: "Alfa Slab One", cursive;
-  font-size: x-large;
-  word-spacing: 2px;
-  letter-spacing: 1px;
-  color: blanco;
-  text-shadow: black 3px 3px 1px;
-  color: white; }
-  .nTitle .nMain {
-    margin: auto; }
-
 .nLista {
   grid-area: nLista;
   display: grid;
@@ -515,12 +492,10 @@ body {
     grid-area: nImg; }
   .nLista .nliMain {
     grid-area: nliMain;
-    font-size: larger;
-    word-spacing: 2px;
-    letter-spacing: 1px;
+    font-family: "Yanone Kaffeesatz", sans-serif;
     color: white;
     text-shadow: black 3px 3px 1px;
-    font-family: "Yanone Kaffeesatz", sans-serif;
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-around;
     flex-direction: column; }
@@ -539,6 +514,7 @@ body {
       animation-name: nlista2;
       animation-iteration-count: initial;
       animation-timing-function: ease-in;
+      animation-duration: 3s;
       animation-duration: 4s;
       animation-delay: 5s; }
 
@@ -551,6 +527,7 @@ body {
       animation-name: nlista3;
       animation-iteration-count: initial;
       animation-timing-function: ease-in;
+      animation-duration: 3s;
       animation-duration: 4s;
       animation-delay: 10s; }
       .nLista .nliMain .nlista3 .linkDonaciones {
@@ -566,6 +543,7 @@ body {
       animation-name: nlista4;
       animation-iteration-count: initial;
       animation-timing-function: ease-in;
+      animation-duration: 3s;
       animation-duration: 4s;
       animation-delay: 15s; }
 
@@ -577,15 +555,12 @@ body {
   .nLista .nSaludos {
     grid-area: nSaludos;
     font-family: "Alfa Slab One", cursive;
-    font-size: x-large;
     color: white;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    display: flex;
-    justify-content: center;
-    align-items: center;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    font-size: 2rem;
     text-align: center;
-    text-shadow: black 3px 3px 1px; }
+    margin-top: 50px; }
 
 /* Donaciones Scss */
 .cajaPaypal {

@@ -1,20 +1,3 @@
-
-.nTitle{
-    grid-area: nTitle;
-    display: flex;
-    align-items: center;
-    text-decoration: none;
-    font-family: $ff-title;
-    font-size: x-large;
-    word-spacing: 2px;
-    letter-spacing: 1px;
-    color: blanco;
-    text-shadow: map-get($paleta, negro )  3px 3px 1px;
-    color: map-get($paleta, blanco );
-    .nMain{
-        margin: auto;
-    }
-}
 .nLista{
     grid-area: nLista;
     display: grid;
@@ -30,20 +13,14 @@
     }
     .nliMain{
         grid-area: nliMain;
-        font-size: larger;
-        word-spacing: 2px;
-        letter-spacing: 1px;
-        color: map-get($paleta, blanco );
-        text-shadow: map-get($paleta, negro )  3px 3px 1px;
-        font-family: $ff-text;
+        @include text-style-white;
+        font-size: 1.5rem;
         display: flex;
         justify-content: space-around;
         flex-direction: column;
         .nlista1{
             animation-name: nlista1;
-            animation-iteration-count: initial;
-            animation-timing-function: ease-in;
-            animation-duration: 3s;  
+            @include animacion-focus;
         }
         @keyframes nlista1{
             0%{color: map-get($paleta, dorado );}
@@ -51,8 +28,7 @@
         }
         .nlista2{
             animation-name: nlista2;
-            animation-iteration-count: initial;
-            animation-timing-function: ease-in;
+            @include animacion-focus;
             animation-duration: 4s;  
             animation-delay: 5s;
         }
@@ -62,8 +38,7 @@
         }
         .nlista3{
             animation-name: nlista3;
-            animation-iteration-count: initial;
-            animation-timing-function: ease-in;
+            @include animacion-focus;
             animation-duration: 4s;
             animation-delay: 10s;  
             .linkDonaciones{
@@ -77,8 +52,7 @@
         }
         .nlista4{
             animation-name: nlista4;
-            animation-iteration-count: initial;
-            animation-timing-function: ease-in;
+            @include animacion-focus;
             animation-duration: 4s;  
             animation-delay: 15s;
         }
@@ -89,15 +63,9 @@
     }
     .nSaludos{
         grid-area: nSaludos;
-        font-family: $ff-title;
-        font-size: x-large;
-        color: map-get($paleta, blanco );
-        word-spacing: 2px;
-        letter-spacing: 1px;
-        display: flex;
-        justify-content: center;
-        align-items: center;
+        @include title-style;
+        font-size: 2rem;
         text-align: center;
-        text-shadow: map-get($paleta, negro )  3px 3px 1px;
+        margin-top: 50px;
     }
 }

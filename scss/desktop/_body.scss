@@ -4,22 +4,3 @@
 body{
     background-image: url(../imagenes/cr.png);
 }
-
-
-
-
-/*body de la pagina Nosotros*/
-
-.body4{
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 70px 1fr 3fr 70px;
-    grid-template-areas: 
-    "navegador"
-    "nTitle"
-    "nLista"
-    "footer"
-    ;
-    gap: 30px;
-}
-
