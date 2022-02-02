@@ -1,83 +1,8 @@
 
-
-/*Vars SCSS*/
-
-$paleta: (azul:rgb(8, 106, 167), azul-claro:rgb(41, 119, 168), rojo:rgb(135, 15, 24), rojo-claro: rgb(145, 39, 46), blanco:rgb(255, 255, 255), dorado:rgb(255, 215, 0), negro: rgb(0,0,0), gris:rgb(100, 88, 88), gris-claro:rgb(206, 195, 195), naranja: rgb(255, 185, 35));
-$ff-title:'Alfa Slab One', cursive;
-$ff-text:'Yanone Kaffeesatz', sans-serif;
-
-/*Mixins SCSS*/
-
-@mixin gradiant-legendary {
-    background: rgb(122,238,155);
-    background: linear-gradient(203deg, rgba(122,238,155,1) 0%, rgba(133,230,163,1) 48%, rgba(249,126,201,1) 100%);
-}
-@mixin gradient-legendary-animation{
-    background: rgb(245,110,192);
-    background: linear-gradient(217deg, rgba(245,110,192,1) 0%, rgba(133,230,163,1) 51%, rgba(122,238,115,1) 100%);
-}
-@mixin gradiant-legendary-middle-animation {
-    background: rgb(133,230,163);
-    background: linear-gradient(217deg, rgba(133,230,163,1) 0%, rgba(255,137,209,1) 51%, rgba(122,238,115,1) 100%);
-}
-@mixin button{
-    font-family: $ff-title;
-    font-size: 1.2rem;
-    border-radius: 10px;
-    border: map-get($paleta, negro ) solid 2px;
-    padding: 2px;
-    transition: 1s ease all;
-    &:hover{
-        border: solid map-get($paleta, dorado ) 2px;
-    }
-}
-@mixin cajas-info{
-    border: outset map-get($paleta, gris ) 4px;
-    background-color: map-get($paleta, rojo );
-}
-@mixin caja-gradiante {
-    background: rgb(135,15,24);
-    background: linear-gradient(203deg, rgba(135,15,24,1) 0%, rgba(112,11,27,1) 58%, rgba(84,10,15,1) 100%);
-    border: outset map-get($paleta, gris ) 4px;
-}
-@mixin caja-normal{
-    background-color: map-get($paleta, naranja );
-}
-@mixin flex-row-center{
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-@mixin flex-column-center{
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-}
-@mixin title-style{
-    font-family: $ff-title;
-    color: map-get($paleta, blanco );
-    text-shadow: map-get($paleta, negro ) 3px 3px 1px;
-    letter-spacing: 2px;
-}
-@mixin text-style{
-    font-family: $ff-text;
-    color: map-get($paleta, negro );
-    background-color: map-get($paleta, blanco );
-}
-@mixin text-style-white {
-    font-family: $ff-text;
-    color: map-get($paleta, blanco );
-    text-shadow: map-get($paleta, negro )  3px 3px 1px;
-}
-@mixin animacion-focus {
-    animation-iteration-count: initial;
-    animation-timing-function: ease-in;
-    animation-duration: 3s;  
-}
-
 /*imports SCSS*/
 
+@import "desktop/variables";
+@import "desktop/mixin";
 @import "desktop/reset";
 @import "desktop/body";
 @import "desktop/nav";
