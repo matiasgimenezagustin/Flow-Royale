@@ -16,7 +16,7 @@
     <link rel="stylesheet" href="../css/estilo.css">
 
     <!--Favicon-->
-    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="../imagenes/favicon.ico">
     <!--Title de la pagina-->
     <title>Flow Royale Registro Page</title>
 </head>
@@ -47,20 +47,34 @@
             Sincroniza tu cuenta de Supercell
         </h1>
     </header>
-    <div class="formulario">
+    <main class="formulario">
         <img src="../imagenes/rey.png" class="rImg" alt="Rey Azul Clash Royale" width="200px">
         <form class="form" action="#">
             <label class="input" for="ID">Completa con tu ID:</label>
-            <input class="negro" type="text" name="ID" placeholder="48-6849387">
-            <input class="boton" type="submit" value="enviar">
+            <input class="negro" required type="text" name="ID" placeholder="48-6849387">
+            <input class="boton" type="submit" value="Enviar">
         </form>
-    </div>
+    </main>
+    <section class="contactoEmail">
+        <h2>
+            Ponte en Contacto con Flow Royale
+        </h2>
+        <form action="">
+            <label for="email">Pon tu Email</label>
+            <input type="email" name="email" placeholder="ejemplo@mail.com" required >
+            <label for="asunto">Asunto</label>
+            <input type="text" required name="asunto">
+            <label for="mensaje">Mensaje</label>
+            <textarea name="mensaje" id="#" cols="30" rows="10" required></textarea>
+            <input class="boton" type="submit" value="Enviar">
+        </form>
+    </section>
     <!--Footer en SCSS-->
     <footer class="bFooter">
         <h3 class="contactFooter">Puedes Contactarme En:</h3>
         <ul>
-            <li><a href="https://www.instagram.com/matute_gimenez_agustin/"><img src="../imagenes/instagram.png" alt=""></a></li>
-            <li><a href="https://github.com/matiasgimenezagustin"><img src="../imagenes/github.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com/clashroyalees/" target="_blank"><img src="../imagenes/instagram.png" alt=""></a></li>
+            <li><a href="https://github.com/matiasgimenezagustin" target="_blank"><img src="../imagenes/github.png" alt=""></a></li>
         </ul>
         <img class="flowRoyaleFooter" src="../imagenes/flow-royale-logo.png" alt="Logo de Flow Royale">
     </footer>

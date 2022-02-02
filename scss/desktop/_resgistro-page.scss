@@ -1,3 +1,4 @@
+
 /* Registro page*/
 
 .formulario{
@@ -24,3 +25,43 @@
         }
     }
 }
+.contactoEmail{
+    margin: auto;
+    margin-bottom: 50px;
+    @include caja-gradiante;
+    @include flex-column-center;
+    gap: 2rem;
+    width: 30rem;
+    h2{
+        @include title-style;
+        font-size: 1.5rem;
+        text-align: center;
+        margin-top: 10px;
+    }
+    form{
+        @include title-style;
+        display: flex;
+        flex-direction: column;
+        gap: 10px;
+        justify-content: space-around;
+        label{
+            font-size: 1.2rem;
+        }
+        input{
+            @include text-style;
+            font-size: 1.2rem;
+        }
+        textarea{
+            @include text-style;
+            font-size: 1.2rem;
+        }
+        .boton{
+            @include gradiant-legendary;
+            @include button;
+            width: 6rem;
+            margin: auto;
+            margin-bottom: 10px;
+        }
+    }
+}
+

@@ -17,7 +17,7 @@
 
     <!--Favicon-->
 
-    <link rel="icon" href="../favicon.ico">
+    <link rel="icon" href="../imagenes/favicon.ico">
     
     <!--Title de la pagina-->
     <title>Flow Royale Donaciones Page</title>
@@ -50,16 +50,16 @@
         </h1>
     </header>
     <!--Caja para cuando sepa, programar como medio de Pago-->
-    <div class="cajaPaypal">
+    <main class="cajaPaypal">
         <form class="dPaypal">
             <label for="paypal" class="paypal">Método de pago vía: PayPal</label>
-            <Input class="paypal1" type="text" placeholder="Nombre de la Cuenta" name="paypal"></Input>
-            <input class="paypal1" type="text" placeholder="00-00000000-00">
+            <Input class="paypal1" type="text" required placeholder="Nombre de la Cuenta" name="paypal"></Input>
+            <input class="paypal1" required type="text" placeholder="00-00000000-00">
             <label for="importe" class="importe">Introduzca un monto:</label>
-            <input class="paypal1" type="number" max="1000" name="importe" min="100">
+            <input class="paypal1" required type="number" max="1000" name="importe" min="100">
             <input type="submit" class="boton">
         </form>
-    </div>
+    </main>
     <div class="saludos">
         <img src="../imagenes/duende.png"  class="duendeImg" alt="Duende Clash Royale">
         <h2 class="dSaludos">¡Gracias por Su Aporte!</h2>
@@ -68,8 +68,8 @@
     <footer class="bFooter">
         <h3 class="contactFooter">Puedes Contactarme En:</h3>
         <ul>
-            <li><a href="https://www.instagram.com/matute_gimenez_agustin/"><img src="../imagenes/instagram.png" alt=""></a></li>
-            <li><a href="https://github.com/matiasgimenezagustin"><img src="../imagenes/github.png" alt=""></a></li>
+            <li><a href="https://www.instagram.com/clashroyalees/" target="_blank"><img src="../imagenes/instagram.png" alt=""></a></li>
+            <li><a href="https://github.com/matiasgimenezagustin" target="_blank"><img src="../imagenes/github.png" alt=""></a></li>
         </ul>
         <img class="flowRoyaleFooter" src="../imagenes/flow-royale-logo.png" alt="Logo de Flow Royale">
     </footer>

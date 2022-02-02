@@ -264,6 +264,7 @@ body {
         border-radius: 10px;
         border: black solid 2px;
         padding: 2px;
+        transition: 1s ease all;
         background: #f56ec0;
         background: linear-gradient(217deg, #f56ec0 0%, #85e6a3 51%, #7aee73 100%);
         transition: all 1s; }
@@ -295,7 +296,8 @@ body {
           font-size: 1.2rem;
           border-radius: 10px;
           border: black solid 2px;
-          padding: 2px; }
+          padding: 2px;
+          transition: 1s ease all; }
           .winCond .contentWin .pCardContent div .normal:hover {
             border: solid gold 2px; }
         .winCond .contentWin .pCardContent div .arena {
@@ -304,7 +306,8 @@ body {
           font-size: 1.2rem;
           border-radius: 10px;
           border: black solid 2px;
-          padding: 2px; }
+          padding: 2px;
+          transition: 1s ease all; }
           .winCond .contentWin .pCardContent div .arena:hover {
             border: solid gold 2px; }
 
@@ -385,7 +388,8 @@ body {
           font-size: 1.2rem;
           border-radius: 10px;
           border: black solid 2px;
-          padding: 2px; }
+          padding: 2px;
+          transition: 1s ease all; }
           .seccionMazos .mazo .mainContent .containerMazo .bGuardar:hover {
             border: solid gold 2px; }
   .seccionMazos .winCond {
@@ -437,7 +441,8 @@ body {
             font-size: 1.2rem;
             border-radius: 10px;
             border: black solid 2px;
-            padding: 2px; }
+            padding: 2px;
+            transition: 1s ease all; }
             .seccionMazos .winCond .contentWin .pCardContent div .legendaria:hover {
               border: solid gold 2px; }
           .seccionMazos .winCond .contentWin .pCardContent div .arena {
@@ -446,7 +451,8 @@ body {
             font-size: 1.2rem;
             border-radius: 10px;
             border: black solid 2px;
-            padding: 2px; }
+            padding: 2px;
+            transition: 1s ease all; }
             .seccionMazos .winCond .contentWin .pCardContent div .arena:hover {
               border: solid gold 2px; }
 
@@ -468,6 +474,7 @@ body {
       border-radius: 10px;
       border: black solid 2px;
       padding: 2px;
+      transition: 1s ease all;
       background: #85e6a3;
       background: linear-gradient(217deg, #85e6a3 0%, #ff89d1 51%, #7aee73 100%);
       transition: 1s all ease;
@@ -480,6 +487,62 @@ body {
       font-size: 1.5rem; }
     .formulario .form .input {
       font-size: 2rem; }
+
+.contactoEmail {
+  margin: auto;
+  margin-bottom: 50px;
+  background: #870f18;
+  background: linear-gradient(203deg, #870f18 0%, #700b1b 58%, #540a0f 100%);
+  border: outset #645858 4px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 2rem;
+  width: 30rem; }
+  .contactoEmail h2 {
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    font-size: 1.5rem;
+    text-align: center;
+    margin-top: 10px; }
+  .contactoEmail form {
+    font-family: "Alfa Slab One", cursive;
+    color: white;
+    text-shadow: black 3px 3px 1px;
+    letter-spacing: 2px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    justify-content: space-around; }
+    .contactoEmail form label {
+      font-size: 1.2rem; }
+    .contactoEmail form input {
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      color: black;
+      background-color: white;
+      font-size: 1.2rem; }
+    .contactoEmail form textarea {
+      font-family: "Yanone Kaffeesatz", sans-serif;
+      color: black;
+      background-color: white;
+      font-size: 1.2rem; }
+    .contactoEmail form .boton {
+      background: #7aee9b;
+      background: linear-gradient(203deg, #7aee9b 0%, #85e6a3 48%, #f97ec9 100%);
+      font-family: "Alfa Slab One", cursive;
+      font-size: 1.2rem;
+      border-radius: 10px;
+      border: black solid 2px;
+      padding: 2px;
+      transition: 1s ease all;
+      width: 6rem;
+      margin: auto;
+      margin-bottom: 10px; }
+      .contactoEmail form .boton:hover {
+        border: solid gold 2px; }
 
 .nLista {
   grid-area: nLista;
@@ -586,7 +649,8 @@ body {
       font-size: 1.2rem;
       border-radius: 10px;
       border: black solid 2px;
-      padding: 2px; }
+      padding: 2px;
+      transition: 1s ease all; }
       .cajaPaypal .dPaypal .boton:hover {
         border: solid gold 2px; }
     .cajaPaypal .dPaypal .paypal {
@@ -861,7 +925,9 @@ body {
       font-family: "Yanone Kaffeesatz", sans-serif;
       color: white;
       text-shadow: black 3px 3px 1px;
-      margin: auto; } }
+      margin: auto; }
+  .contactoEmail {
+    width: 95%; } }
 
 /* contenido de Nosotros */
 @media screen and (max-width: 420px) {
