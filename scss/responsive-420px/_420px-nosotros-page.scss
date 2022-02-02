@@ -1,14 +1,12 @@
 
 /* contenido de Nosotros */
+
 @media screen and (max-width: 420px){
-    .nMain{
-        text-align: center;
-    }
     .nLista{
         grid-area: nLista;
         display: grid;
         grid-template-columns: 1fr;
-        grid-template-rows: 600px 1fr;
+        grid-template-rows: 600px 200px 200px;
         grid-template-areas: 
         "nliMain"
         "nImg"
@@ -16,9 +14,8 @@
         ;
         .nImg{
             display: inline-block;
-            width: 350px;
-            position: relative;
-            left: 15px;
+            width: 16rem;
+            margin: auto;
         }
         .nliMain{
             font-size: x-large;
@@ -31,6 +28,9 @@
             display: flex;
             justify-content: space-around;
             flex-direction: column;
+        }
+        .nSaludos{
+            font-size: 1.8rem;
         }
     }
 }

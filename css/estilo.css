@@ -532,7 +532,8 @@ body {
       animation-delay: 10s; }
       .nLista .nliMain .nlista3 .linkDonaciones {
         color: gold;
-        text-decoration: gold; }
+        text-decoration: gold;
+        font-size: 1.9rem; }
 
 @keyframes nlista3 {
   0% {
@@ -683,15 +684,6 @@ body {
       width: 100%; }
     .bFooter .contactFooter {
       font-size: 1.3rem; } }
-
-/*media queries de los body*/
-@media screen and (max-width: 420px) {
-  .body4 {
-    background-image: url(../imagenes/cr.png);
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-template-rows: 340px 100px 3fr 60px;
-    grid-template-areas: "navegador" "nTitle" "nLista" "footer"; } }
 
 /*Navbar 420px SCSS*/
 @media screen and (max-width: 420px) {
@@ -873,19 +865,16 @@ body {
 
 /* contenido de Nosotros */
 @media screen and (max-width: 420px) {
-  .nMain {
-    text-align: center; }
   .nLista {
     grid-area: nLista;
     display: grid;
     grid-template-columns: 1fr;
-    grid-template-rows: 600px 1fr;
+    grid-template-rows: 600px 200px 200px;
     grid-template-areas: "nliMain" "nImg" "nSaludos"; }
     .nLista .nImg {
       display: inline-block;
-      width: 350px;
-      position: relative;
-      left: 15px; }
+      width: 16rem;
+      margin: auto; }
     .nLista .nliMain {
       font-size: x-large;
       text-align: center;
@@ -896,7 +885,9 @@ body {
       font-family: "Yanone Kaffeesatz", sans-serif;
       display: flex;
       justify-content: space-around;
-      flex-direction: column; } }
+      flex-direction: column; }
+    .nLista .nSaludos {
+      font-size: 1.8rem; } }
 
 /*MediaQuerie 420px Donaciones Page*/
 @media screen and (max-width: 420px) {
