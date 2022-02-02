@@ -42,10 +42,13 @@
         "caballeroImg"
         "liMain"
         ;
+        .contentTitle{
+            text-align: center;
+        }
         .caballeroImg{
             display: inline-block;
-            margin: auto;
             margin-left: 0;
+            margin: auto;
         }
     }
 }
